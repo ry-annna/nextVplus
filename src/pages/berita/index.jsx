@@ -38,7 +38,7 @@ const BeritaPage = () => {
           berita.map((item) => (
             <div
               className="flex py-[15px] px-[20px] border-b border-slate-200"
-              id={item.id}
+              key={item.id}
             >
               <div className="flex flex-col justify-between">
                 <h1 className="text-[16px] font-semibold pr-[80px]">
