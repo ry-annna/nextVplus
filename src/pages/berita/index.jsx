@@ -25,7 +25,7 @@ const BeritaPage = () => {
   //   // const element = array[i];
   //   console.log(i);
   // }
-  console.log(berita[0]);
+  // console.log(berita[0]);
 
   return (
     <div className="flex justify-center">
@@ -35,10 +35,10 @@ const BeritaPage = () => {
         </div>
 
         {berita.length > 0 &&
-          berita.map((item) => (
+          berita.map((item, index) => (
             <div
               className="flex py-[15px] px-[20px] border-b border-slate-200"
-              key={item.id}
+              key={index}
             >
               <div className="flex flex-col justify-between">
                 <h1 className="text-[16px] font-semibold pr-[80px]">
