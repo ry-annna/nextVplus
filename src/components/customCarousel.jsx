@@ -56,7 +56,10 @@ const CustomCarousel = () => {
             style={{ transform: `translateX(-${curr * 100}%)` }}
           >
             {MainContentLists.map((element) => (
-              <div className="bg-white rounded-3xl max-sm:p-[15px] xl:p-[30px] max-[769px]:p-[15px] drop-shadow-md xl:min-w-[518px] max-sm:min-w-[250px] h-fit sm:max-[769px]:min-w-[300px] sm:max-[769px]:h-[300px] sm:max-[1025px]:min-w-[530px] sm:max-[1025px]:h-[530px]">
+              <div
+                id={element.id}
+                className="bg-white rounded-3xl max-sm:p-[15px] xl:p-[30px] max-[769px]:p-[15px] drop-shadow-md xl:min-w-[518px] max-sm:min-w-[250px] h-fit sm:max-[769px]:min-w-[300px] sm:max-[769px]:h-[300px] sm:max-[1025px]:min-w-[530px] sm:max-[1025px]:h-[530px]"
+              >
                 <p className="text-[#3a336f] font-bold max-sm:text-[30px] max-[769px]:text-[30px] max-[1025px]:text-[30px] xl:text-[50px] max-sm:leading-8 max-[769px]:leading-8 xl:leading-tight xl:mt-[13px] font-Montserrat">
                   {element.headline}
                 </p>
