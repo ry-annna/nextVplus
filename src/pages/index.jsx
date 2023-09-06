@@ -42,7 +42,7 @@ export default function Home() {
         <div className=" z-20 mt-5 xl:w-[1140px] mx-auto">
           <CustomCarousel />
 
-          {/* <div className="relative flex flex-wrap justify-between mt-10">
+          <div className="relative flex flex-wrap justify-between mt-10">
             <div className="px-[20px] py-[35px] w-[276px] flex flex-col justify-start">
               <div className="mx-auto w-[145px] h-[145px] relative">
                 <div className="bg-[#f1c50e] absolute w-[118px] h-[118px] rounded-full mr-[-1px] ml-[28px] z-10"></div>
@@ -124,11 +124,11 @@ export default function Home() {
                 <br />
               </p>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
 
-      {/* <section className="relative h-max">
+      <section className="relative h-max">
         <div className="w-[1140px] mx-auto pt-[65px]">
           <h2 className="text-[60px] font-Montserrat font-bold mx-[60px] mb-[50px]">
             Mulai trading dengan 4 langkah
@@ -622,7 +622,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
