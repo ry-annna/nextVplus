@@ -50,7 +50,7 @@ const CustomCarousel = () => {
           </div>
         </div>
 
-        {/* <div className="absolute right-0 flex flex-col overflow-hidden xl:top-40 max-sm:top-40 max-[769px]:top-64 max-[1025px]:top-64">
+        <div className="absolute right-0 flex flex-col overflow-hidden xl:top-40 max-sm:top-40 max-[769px]:top-64 max-[1025px]:top-64">
           <div
             className="flex xl:w-[518px] max-sm:w-[250px] transition-transform duration-[800ms] max-[769px]:w-[300px] max-[769px]:h-[300px] max-[1025px]:w-[530px] max-[1025px]:h-[530px]"
             style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -67,7 +67,7 @@ const CustomCarousel = () => {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
