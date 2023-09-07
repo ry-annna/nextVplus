@@ -13,7 +13,7 @@ const CustomNavbar = () => {
 
   return (
     <div className="sticky top-0 z-50 bg-white border border-slate-200">
-      <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto xl:py-4 xl:px-16 lg:px-14 lg:py-2 max-sm:px-4 max-sm:py-1 max-[769px]:px-4 max-[769px]:py-1">
+      <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto max-sm:px-4 max-sm:py-1 sm:max-md:px-4 sm:max-md:py-2 md:max-lg:px-5 md:max-lg:py-3 xl:py-4 xl:px-16 lg:px-14 lg:py-2">
         {/* LOGO */}
         <Link
           href="/"
@@ -26,7 +26,7 @@ const CustomNavbar = () => {
           />
         </Link>
 
-        <div className="border-2 rounded-lg min-[769px]:hidden">
+        <div className="border-2 rounded-lg md:hidden">
           <button
             className={`p-1 duration-200 ${toggle ? "rotate-180" : ""}`}
             onClick={() => setToggle(!toggle)}
@@ -39,12 +39,12 @@ const CustomNavbar = () => {
         </div>
 
         {/* NAVBAR LIST */}
-        <div className="items-center hidden min-[769px]:block">
+        <div className="items-center hidden md:block">
           <div
-            className="flex items-center w-full md:w-auto xl:gap-8 lg:gap-6"
+            className="flex items-center w-full md:w-auto xl:gap-8 lg:gap-6 md:max-lg:gap-3"
             id="navbar-dropdown"
           >
-            <ul className="flex flex-col mt-4 font-medium border border-gray-100 rounded-lg lg:text-base bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
+            <ul className="flex flex-col mt-4 font-medium border border-gray-100 rounded-lg lg:text-base bg-gray-50 sm:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
               <li className="group">
                 <button
                   id="dropdownNavbarLink"
@@ -279,9 +279,11 @@ const CustomNavbar = () => {
                 </button>
               </li>
             </ul>
-            <div className="flex gap-2 lg:flex-col xl:flex-row max-[769px]:hidden">
-              <ButtonAkun type="DEMO" />
-              <ButtonAkun type="REAL" />
+            <div className="hidden md:block">
+              <div className="flex gap-2 md:max-lg:flex-col xl:flex-row">
+                <ButtonAkun type="DEMO" />
+                <ButtonAkun type="REAL" />
+              </div>
             </div>
           </div>
         </div>

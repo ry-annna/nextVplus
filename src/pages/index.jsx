@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex max-sm:gap-2 max-sm:px-1 lg:flex-col xl:flex-row min-[769px]:hidden w-full justify-center my-2 max-[769px]:gap-14">
+      <div className="flex justify-center w-full my-2 max-sm:gap-2 max-sm:px-1 md:hidden max-md:gap-14">
         <ButtonAkun type="DEMO" />
         <ButtonAkun type="REAL" />
       </div>
@@ -38,11 +38,11 @@ export default function Home() {
       </div>
 
       <section className="flex justify-center">
-        <div className="z-10 absolute xl:h-[600px] w-full lg:h-[534px] bg-[#3a336f] "></div>
-        <div className=" z-20 mt-5 xl:w-[1140px] mx-auto">
+        <div className="z-10 absolute bg-[#3a336f] w-full max-sm:h-[200px] sm:h-[600px]"></div>
+        <div className="z-20 mx-auto mt-5 xl:w-[1140px]">
           <CustomCarousel />
 
-          <div className="relative flex flex-wrap justify-between mt-10">
+          <div className="relative flex flex-wrap items-center justify-center mt-10">
             <div className="px-[20px] py-[35px] w-[276px] flex flex-col justify-start">
               <div className="mx-auto w-[145px] h-[145px] relative">
                 <div className="bg-[#f1c50e] absolute w-[118px] h-[118px] rounded-full mr-[-1px] ml-[28px] z-10"></div>
@@ -129,13 +129,13 @@ export default function Home() {
       </section>
 
       <section className="relative h-max">
-        <div className="w-[1140px] mx-auto pt-[65px]">
-          <h2 className="text-[60px] font-Montserrat font-bold mx-[60px] mb-[50px]">
+        <div className="xl:w-[1140px] mx-auto pt-[65px]">
+          <h2 className="font-Montserrat font-bold text-center max-sm:text-[30px] max-sm:mb-[30px] sm:text-[60px] sm:mx-[60px] sm:mb-[50px]">
             Mulai trading dengan 4 langkah
           </h2>
-          <div className="flex flex-wrap items-center justify-center w-full gap-9">
-            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl">
-              <p className="text-white font-Open_Sans text-[20px]">
+          <div className="flex flex-wrap items-center justify-center w-full gap-9 max-sm:p-3">
+            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+              <p className="text-white font-Open_Sans text-[20px] max-sm:text-center">
                 Buka akun dengan mengisi email, nomor handphone dan data
                 pribadi.
               </p>
@@ -145,8 +145,8 @@ export default function Home() {
                 </p>
               </button>
             </div>
-            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl">
-              <p className="text-black font-Open_Sans text-[20px]">
+            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+              <p className="text-black font-Open_Sans text-[20px] max-sm:text-center">
                 Verifikasi identitas dan data pribadi anda melalui tatap muka
                 atau video call dengan wakil pialang berjangka berlisensi.
               </p>
@@ -156,9 +156,9 @@ export default function Home() {
                 </p>
               </button>
             </div>
-            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl">
-              <p className="text-black font-Open_Sans text-[20px]">
-                Lakukan deposit di bank - bank yang sudah terdaftar di Bappebti
+            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+              <p className="text-black font-Open_Sans text-[20px] max-sm:text-center">
+                Lakukan deposit di bank - bank yang sudah terdaftar di BAPPEBTI
                 sebagai rekening terpisah broker.
               </p>
               <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
@@ -167,8 +167,8 @@ export default function Home() {
                 </p>
               </button>
             </div>
-            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl">
-              <p className="text-white font-Open_Sans text-[20px]">
+            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+              <p className="text-white font-Open_Sans text-[20px] max-sm:text-center">
                 Dapatkan keuntungan dengan trading Forex, Emas, Minyak dan
                 Indeks.
               </p>
@@ -182,7 +182,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f1c50e] mt-[60px] py-[40px]">
+      {/* <section className="bg-[#f1c50e] mt-[60px] py-[40px]">
         <div className="w-[1140px] pt-[30px] flex flex-row mx-auto">
           <div className="w-max">
             <h1 className="text-[60px] font-Montserrat font-bold w-max">
@@ -231,9 +231,9 @@ export default function Home() {
             ></Image>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="h-max mb-[60px]">
+      {/* <section className="h-max mb-[60px]">
         <div className="w-[1140px] mx-auto pt-[65px]">
           <h2 className="text-[60px] font-Montserrat font-bold mx-[60px] mb-[50px]">
             Mulai trading dengan 4 langkah
@@ -373,9 +373,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="relative z-0 h-full">
+      {/* <section className="relative z-0 h-full">
         <div className="bg-[#f1c50e] absolute z-10 w-full h-full"></div>
         <div className="h-[427px] w-full bg-center bg-cover brightness-50 bg-[url('../assets/images/4e7f28cb-e9a6-4d5c-a40f-edcf9e022f52.jpg')] absolute z-20"></div>
         <div className="w-[1140px] mx-auto">
@@ -433,9 +433,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="">
+      {/* <section className="">
         <div className="bg-[url('../assets/images/-min.jpg')] w-full h-max bg-cover bg-center">
           <div className="w-[1140px] mx-auto py-16">
             <div className="w-[570px] h-[478px] p-[30px] bg-white rounded-3xl flex justify-center flex-col ">
@@ -451,9 +451,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="">
+      {/* <section className="">
         <div className="relative">
           <div className="bg-[#3a336f] absolute z-10 w-full h-full"></div>
           <div className="bg-[#f1c50e] w-full h-[536px] absolute z-20"></div>
@@ -553,9 +553,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <div className="relative">
           <div className="bg-[#f1c50e] absolute z-10 w-full h-screen"></div>
           <div className="bg-[#3a336f] w-full h-[250px] absolute z-20"></div>
@@ -622,7 +622,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

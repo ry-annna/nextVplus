@@ -5,15 +5,15 @@ import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 const DemoAkunPage = () => {
   return (
     <div>
-      <section className="bg-[#3a336f] h-full">
-        <div className="w-[1140px] mx-auto py-16">
-          <div className="border-4 border-[#f1c50e] flex justify-center p-[30px] rounded-3xl">
+      <section className="bg-[#3a336f] h-screen">
+        <div className="xl:w-[1140px] mx-auto xl:py-16 max-md:mx-4 md:max-lg:mx-10 max-md:pt-4 md:max-lg:pt-10 ">
+          <div className="border-4 border-[#f1c50e] flex justify-center rounded-3xl xl:p-[30px] max-md:p-[15px] md:max-lg:p-[15px]">
             <p className="text-[16px] font-Open_Sans text-white">
               Dengan dana virtual, asah skill trading anda dengan simulasi di
               akun demo dan memastikan kesiapan anda saat membuka Akun Real.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center mt-10">
+          {/* <div className="flex flex-col items-center justify-center mt-10">
             <h1 className="uppercase text-[36px] font-Open_Sans text-white font-bold mb-5">
               Demo Akun
             </h1>
@@ -61,7 +61,7 @@ const DemoAkunPage = () => {
                   </div>
                 </div>
 
-                {/* <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <Checkbox id="agree" />
                   <Label className="flex" htmlFor="agree">
                     <p>I agree with the</p>
@@ -72,7 +72,7 @@ const DemoAkunPage = () => {
                       <p>terms and conditions</p>
                     </LinkComponent>
                   </Label>
-                </div> */}
+                </div>
 
                 <button
                   type="submit"
@@ -82,10 +82,10 @@ const DemoAkunPage = () => {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
-      <section className="bg-[#f1c50e] h-full">
+      {/* <section className="bg-[#f1c50e] h-full">
         <div className="w-[1140px] flex justify-center mx-auto">
           <div className="w-[570px] h-[400px] p-[30px]">
             <h1 className="text-[60px] font-Montserrat text-black font-bold">
@@ -128,15 +128,15 @@ const DemoAkunPage = () => {
             </p>
           </div>
         </div>
-      </section>
-      <footer className="h-[95px] bg-[#333333] flex justify-center flex-col items-center">
+      </section> */}
+      {/* <footer className="h-[95px] bg-[#333333] flex justify-center flex-col items-center">
         <p className="text-[14px] font-Open_Sans text-white">
           Associate with PT Victory International Futures Platinum 8
         </p>
         <p className="text-[14px] font-Open_Sans text-[#f1c50e]">
           Copyright © 2​020 vplus.id. All rights reserved.
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

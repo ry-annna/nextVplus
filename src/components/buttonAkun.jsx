@@ -9,17 +9,17 @@ const ButtonAkun = (props) => {
   const { type } = props;
   return (
     <Link href={`${type === "DEMO" ? "/demoAkun" : "/realAkun"}`}>
-      <button className="text-white bg-[#3a336f] max-[769px]:flex max-[769px]:justify-center max-[769px]:w-[200px] lg:text-sm xl:text-base py-3 px-4 rounded-md flex gap-2 hover:scale-105 duration-300 hover:text-black hover:bg-[#f1c50e] max-sm:h-fit">
+      <button className="text-white py-3 px-4 rounded-md flex gap-2 hover:scale-105 duration-300 hover:text-black hover:bg-[#f1c50e] bg-[#3a336f] max-sm:h-fit sm:max-md:flex sm:max-md:justify-center sm:max-md:w-[200px] md:max-lg:w-[144px] lg:max-xl:w-[138px] lg:text-sm xl:text-base">
         {type === "DEMO" ? (
           <Image
             src={img456283_318fef4e}
-            className="xl:w-6 lg:w-5 max-sm:w-5 max-[769px]:w-5"
+            className="max-sm:w-5 sm:max-md:w-5 md:max-lg:w-5 lg:max-xl:w-6 xl:w-6"
             alt=""
           />
         ) : (
           <Image
             src={img1250758_3cbe51b5}
-            className="xl:w-6 lg:w-5 max-sm:w-5 max-[769px]:w-5"
+            className="max-sm:w-5 sm:max-md:w-5 md:max-lg:w-5 lg:max-xl:w-6 xl:w-6"
             alt=""
           />
         )}

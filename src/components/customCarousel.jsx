@@ -34,14 +34,14 @@ const CustomCarousel = () => {
       </div>
 
       <div className="relative flex">
-        <div className="relative flex flex-col overflow-hidden ">
+        <div className="relative flex flex-col overflow-hidden">
           <div
-            className="flex transition-transform relative duration-500 left-0 max-sm:w-full max-sm:h-full max-[769px]:w-[640px] max-[769px]:h-[675px] max-[1025px]:w-[837px] max-[1025px]:h-[837px] lg:w-[837px] lg:h-[837px]"
+            className="flex transition-transform relative duration-500 left-0 max-sm:w-full max-sm:h-full sm:max-md:w-[640px] sm:max-md:h-[640px] md:max-lg:w-[737px] md:max-lg:h-[737px] lg:w-[837px] lg:h-[837px] "
             style={{ transform: `translateX(-${curr * 100}%)` }}
           >
             {MainContentLists.map((element) => (
               <Image
-                className="xl:rounded-[50px] max-sm:rounded-[20px] max-[769px]:rounded-[50px] max-[1025px]:rounded-[50px] max-sm:w-full max-sm:h-full sm:max-[769px]:min-w-[640px] sm:max-[769px]:h-[675px] md:max-lg:min-w-[837px] max-[1025px]:h-[837px] lg:min-w-[837px] lg:h-[837px]"
+                className="max-sm:rounded-[20px] sm:max-md:rounded-[50px] md:max-lg:rounded-[50px] lg:max-xl:rounded-[50px] xl:rounded-[50px] max-sm:min-w-full max-sm:h-full sm:max-md:min-w-[640px] sm:max-md:h-[640px] md:max-lg:min-w-[737px] md:max-lg:h-[737px] lg:min-w-[837px] lg:h-[837px]"
                 key={element.id}
                 src={element.src}
                 alt=""
@@ -50,21 +50,21 @@ const CustomCarousel = () => {
           </div>
         </div>
 
-        <div className="absolute right-0 flex flex-col overflow-hidden xl:top-40 max-sm:top-40 max-[769px]:top-64 max-[1025px]:top-64">
+        <div className="absolute right-0 flex flex-col overflow-hidden max-sm:top-40 sm:max-xl:top-64 xl:top-40 ">
           <div
-            className="flex xl:w-[518px] max-sm:w-[250px] transition-transform duration-[800ms] max-[769px]:w-[300px] max-[769px]:h-[300px] max-[1025px]:w-[530px] max-[1025px]:h-[530px]"
+            className="flex transition-transform duration-[800ms] max-sm:w-[250px] sm:max-md:w-[300px] md:w-[530px]"
             style={{ transform: `translateX(-${curr * 100}%)` }}
           >
             {MainContentLists.map((element) => (
               <div
                 key={element.id}
-                className="bg-white rounded-3xl max-sm:p-[15px] xl:p-[30px] max-[769px]:p-[15px] drop-shadow-md xl:min-w-[518px] max-sm:min-w-[250px] h-fit sm:max-[769px]:min-w-[300px] sm:max-[769px]:h-[300px] sm:max-[1025px]:min-w-[530px] sm:max-[1025px]:h-[530px]"
+                className="bg-white rounded-3xl max-sm:opacity-80 max-md:p-[15px] md:max-xl:p-[20px] xl:p-[30px] drop-shadow-md h-fit max-sm:min-w-[250px] sm:max-md:min-w-[300px] md:min-w-[530px]"
               >
-                <p className="text-[#3a336f] font-bold max-sm:text-[30px] max-[769px]:text-[30px] max-[1025px]:text-[30px] xl:text-[50px] max-sm:leading-8 max-[769px]:leading-8 xl:leading-tight xl:mt-[13px] font-Montserrat">
+                <p className="text-[#3a336f] font-Montserrat font-bold max-md:text-[30px] md:max-xl:text-[50px] xl:text-[50px] max-md:leading-8 md:leading-none xl:mt-[13px]">
                   {element.headline}
                 </p>
 
-                <p className="xl:mt-[27px] max-sm:mt-[10px] max-[769px]:mt-[10px] font-Open_Sans max-sm:text-[10px] max-[769px]:text-[14px]">
+                <p className="font-Open_Sans xl:mt-[27px] max-md:mt-[10px] md:mt-[15px] max-sm:text-[10px] sm:max-md:text-[14px] md:text-[18px]">
                   {element.desc}
                 </p>
               </div>
