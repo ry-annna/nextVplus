@@ -16,6 +16,7 @@ import logo95383126691a72 from "../assets/images/953831-26691a72.png";
 import logo561127c47308a4 from "../assets/images/561127-c47308a4.png";
 import bgbf5831c7be6125756483f38c1ca09a87 from "../assets/images/bf5831c7-be61-2575-6483-f38c1ca09a87.jpg";
 import bgwewe from "../assets/images/wewe.jpg";
+import bg4e7f28cbe9a64d5ca40fedcf9e022f52 from "../assets/images/4e7f28cb-e9a6-4d5c-a40f-edcf9e022f52.jpg";
 import metatrader5multiassetplatform_2xremovebgpreview from "../assets/images/metatrader-5-multi-asset-platform_2x-removebg-preview.png";
 
 export default function Home() {
@@ -391,21 +392,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="relative z-0 h-full">
+      <section className="relative h-full">
         <div className="bg-[#f1c50e] absolute z-10 w-full h-full"></div>
-        <div className="h-[427px] w-full bg-center bg-cover brightness-50 bg-[url('../assets/images/4e7f28cb-e9a6-4d5c-a40f-edcf9e022f52.jpg')] absolute z-20"></div>
-        <div className="w-[1140px] mx-auto">
-          <div className="relative z-30 flex flex-col items-center pt-[100px] px-[20px] pb-[30px]">
-            <h2 className="text-[48px] font-Montserrat text-white font-bold">
+        <Image
+          src={bg4e7f28cbe9a64d5ca40fedcf9e022f52}
+          alt=""
+          className="h-[427px] w-full brightness-[.4] absolute z-10"
+        />
+        <div className="xl:w-[1140px] mx-auto relative z-20">
+          <div className="flex flex-col items-center lg:pt-[100px] max-lg:pt-[30px] px-[20px] pb-[30px]">
+            <h2 className="font-Montserrat text-white font-bold max-md:text-[32px] md:max-xl:text-[39px] xl:text-[48px] text-center">
               Vplus membantu anda memahami trading
             </h2>
-            <p className="text-[20px] font-Open_Sans text-white mt-[37px]">
+            <p className="text-[20px] font-Open_Sans text-white mt-[37px] text-center">
               Berbagai produk trading yang perlu anda ketahui.
             </p>
-            <div className="flex gap-6 mt-12">
-              <div>
+            <div className="flex flex-wrap justify-center gap-6 mt-12">
+              <div className="drop-shadow-2xl">
                 <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
-                <div className="flex drop-shadow-2xl flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
+                <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
                   <h2 className="text-[36px] font-Montserrat text-black font-bold">
                     Forex
                   </h2>
@@ -418,9 +423,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="drop-shadow-2xl">
                 <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
-                <div className="flex drop-shadow-2xl flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
+                <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
                   <h2 className="text-[36px] font-Montserrat text-black font-bold">
                     Index
                   </h2>
@@ -432,9 +437,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="drop-shadow-2xl">
                 <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
-                <div className="flex drop-shadow-2xl flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
+                <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
                   <h2 className="text-[36px] font-Montserrat text-black font-bold">
                     Komoditi
                   </h2>
@@ -449,7 +454,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="">
         <div className="bg-[url('../assets/images/-min.jpg')] w-full h-max bg-cover bg-center">
