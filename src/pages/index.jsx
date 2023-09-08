@@ -17,6 +17,7 @@ import logo561127c47308a4 from "../assets/images/561127-c47308a4.png";
 import bgbf5831c7be6125756483f38c1ca09a87 from "../assets/images/bf5831c7-be61-2575-6483-f38c1ca09a87.jpg";
 import bgwewe from "../assets/images/wewe.jpg";
 import bg4e7f28cbe9a64d5ca40fedcf9e022f52 from "../assets/images/4e7f28cb-e9a6-4d5c-a40f-edcf9e022f52.jpg";
+import bgmin from "../assets/images/-min.jpg";
 import metatrader5multiassetplatform_2xremovebgpreview from "../assets/images/metatrader-5-multi-asset-platform_2x-removebg-preview.png";
 
 export default function Home() {
@@ -456,14 +457,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="">
-        <div className="bg-[url('../assets/images/-min.jpg')] w-full h-max bg-cover bg-center">
-          <div className="w-[1140px] mx-auto py-16">
-            <div className="w-[570px] h-[478px] p-[30px] bg-white rounded-3xl flex justify-center flex-col ">
-              <h2 className="text-[60px] font-Montserrat text-black font-bold">
+      <section className="relative">
+        <Image
+          src={bgmin}
+          alt=""
+          className="absolute z-10 object-cover w-full h-full"
+        />
+        <div className="max-lg:px-[10px]">
+          <div className="xl:w-[1140px] mx-auto py-16 relative z-20">
+            <div className="lg:w-[570px] max-lg:w-full lg:h-[478px] p-[30px] bg-white rounded-3xl flex justify-center flex-col ">
+              <h2 className="lg:text-[60px] max-md:text-[30px] md:max-xl:text-[45px] font-Montserrat text-black font-bold max-sm:leading-10">
                 Hasilkan Uang Dengan Klik
               </h2>
-              <p className="text-[24px] font-Open_Sans mt-[20px]">
+              <p className="md:text-[24px] max-md:text-[16px] font-Open_Sans mt-[20px]">
                 Hasilkan uang dengan klik melalui HP anda.
               </p>
               <button className="uppercase text-[#3a336f] bg-[#f1c50e] mt-[20px] text-[12px] py-[15px] px-[41px] w-[172px] h-[50px] font-bold rounded-xl">
@@ -472,7 +478,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="">
         <div className="relative">
