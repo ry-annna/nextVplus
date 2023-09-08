@@ -130,7 +130,7 @@ export default function Home() {
 
       <section className="relative h-max">
         <div className="xl:w-[1140px] mx-auto pt-[65px]">
-          <h2 className="font-Montserrat font-bold text-center max-sm:text-[30px] max-sm:mb-[30px] sm:text-[60px] sm:mx-[60px] sm:mb-[50px]">
+          <h2 className="font-Montserrat font-bold text-center max-sm:text-[30px] max-sm:mb-[30px] sm:text-[60px] sm:mx-[60px] sm:mb-[50px] max-[390px]:mx-[10px]">
             Mulai trading dengan 4 langkah
           </h2>
           <div className="flex flex-wrap items-center justify-center w-full gap-9 max-sm:p-3">
