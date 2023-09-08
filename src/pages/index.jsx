@@ -246,7 +246,7 @@ export default function Home() {
               <div className="mt-[40px]">
                 <svg
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 512 512"
+                  // viewBox="0 0 512 512"
                   fill="#3a336f"
                   className="w-[148px] "
                 >
@@ -269,7 +269,7 @@ export default function Home() {
               <div className="mt-[40px]">
                 <svg
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 512 512"
+                  // viewBox="0 0 512 512"
                   fill="#cfcfcf"
                   className="w-[148px] "
                 >
@@ -292,7 +292,7 @@ export default function Home() {
               <div className="mt-[40px]">
                 <svg
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 512 512"
+                  // viewBox="0 0 512 512"
                   fill="#f1c50e"
                   className="w-[148px] "
                 >
@@ -312,7 +312,7 @@ export default function Home() {
               <div className="mt-[40px]">
                 <svg
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 512 512"
+                  // viewBox="0 0 512 512"
                   fill="#cfcfcf"
                   className="w-[148px] "
                 >
@@ -334,7 +334,7 @@ export default function Home() {
               <div className="mt-[40px]">
                 <svg
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 512 512"
+                  // viewBox="0 0 512 512"
                   fill="#3a336f"
                   className="w-[148px] "
                 >
@@ -357,7 +357,7 @@ export default function Home() {
               <div className="mt-[40px]">
                 <svg
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 512 512"
+                  // viewBox="0 0 512 512"
                   fill="#cfcfcf"
                   className="w-[148px] "
                 >
