@@ -233,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="h-max mb-[60px]">
+      <section className="h-max mb-[60px]">
         <div className="xl:w-[1140px] mx-auto pt-[65px]">
           <h2 className="font-Montserrat font-bold w-full max-md:mb-[30px] max-md:text-[30px] md:max-xl:text-[60px] text-center xl:text-[60px] md:mb-[50px]">
             We'll help manage your business
@@ -373,7 +373,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="relative z-0 h-full">
         <div className="bg-[#f1c50e] absolute z-10 w-full h-full"></div>
