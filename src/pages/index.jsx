@@ -182,13 +182,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="bg-[#f1c50e] mt-[60px] py-[40px]">
-        <div className="w-[1140px] pt-[30px] flex flex-row mx-auto">
+      <section className="bg-[#f1c50e] max-xl:mt-[20px] xl:mt-[60px] xl:py-[40px]">
+        <div className="pt-[30px] flex justify-center items-center max-lg:flex-col mx-auto sm:max-lg:w-[545px] xl:w-[1140px] md:max-xl:px-[30px] max-[1141px]:pb-[30px]">
           <div className="w-max">
-            <h1 className="text-[60px] font-Montserrat font-bold w-max">
+            <h1 className="font-Montserrat font-bold w-max max-xl:text-[30px] max-sm:text-center xl:text-[60px]">
               Platform Trading
             </h1>
-            <div className="flex justify-center w-max mt-[20px]">
+            <div className="flex justify-center w-max mt-[20px] max-sm:flex-col max-sm:gap-5">
               <div className="w-[266px]">
                 <h3 className="text-[20px] font-Open_Sans font-bold">
                   Web Trader
@@ -199,7 +199,7 @@ export default function Home() {
                   <li>Order dalam 1x klik</li>
                 </ul>
 
-                <button className="mt-[40px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] w-max">
+                <button className="max-md:mt-5 md:mt-[40px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] w-max max-sm:w-full">
                   <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
                     lebih lanjut
                   </p>
@@ -208,7 +208,7 @@ export default function Home() {
 
               <div className="w-[266px]">
                 <h3 className="text-[20px] font-Open_Sans font-bold">
-                  Web Trader
+                  Trade on Mobile & PC
                 </h3>
                 <ul className="list-disc ">
                   <li>Lebih dari 50 Indikator Teknikal yang sudah terinstal</li>
@@ -216,7 +216,7 @@ export default function Home() {
                   <li>3 Tipe Chart & 9 Timeframe</li>
                 </ul>
 
-                <button className="mt-[20px] py-[18px] px-[40px] rounded-xl bg-[#3a336f]">
+                <button className="max-sm:mt-5 md:mt-[20px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] max-sm:w-full">
                   <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
                     lebih lanjut
                   </p>
@@ -224,23 +224,23 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-max">
+          <div className="xl:w-max max-sm:w-full max-md:px-3 max-md:pt-3">
             <Image
               src={metatrader5multiassetplatform_2xremovebgpreview}
               alt=""
             ></Image>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className="h-max mb-[60px]">
-        <div className="w-[1140px] mx-auto pt-[65px]">
-          <h2 className="text-[60px] font-Montserrat font-bold mx-[60px] mb-[50px]">
-            Mulai trading dengan 4 langkah
+      <section className="h-max mb-[60px]">
+        <div className="xl:w-[1140px] mx-auto pt-[65px]">
+          <h2 className="font-Montserrat font-bold w-full max-md:mb-[30px] max-md:text-[30px] md:max-xl:text-[60px] text-center xl:text-[60px] md:mb-[50px]">
+            We'll help manage your business
           </h2>
-          <div className="flex flex-wrap gap-[15px] cards justify-center">
+          <div className="flex flex-wrap gap-[15px] justify-center max-sm:px-[10px]">
             <div className="w-[369px] bg-[#f1c50e] rounded-3xl h-[369px] p-[30px] flex flex-col justify-center items-center">
-              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium">
+              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium max-sm:text-center">
                 Tentang Vplus
               </h4>
               <div className="mt-[40px]">
@@ -263,7 +263,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[369px] bg-center bg-cover brightness-100 bg-[url('../assets/images/bf5831c7-be61-2575-6483-f38c1ca09a87.jpg')] rounded-3xl h-[369px] p-[30px] flex flex-col justify-center items-center">
-              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white">
+              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white max-sm:text-center">
                 TRADING
               </h4>
               <div className="mt-[40px]">
@@ -286,7 +286,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[369px] bg-[#3a336f] rounded-3xl h-[369px] p-[30px] flex flex-col justify-center items-center">
-              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white">
+              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white max-sm:text-center">
                 ANALISA
               </h4>
               <div className="mt-[40px]">
@@ -306,7 +306,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[369px] bg-[#3a336f] rounded-3xl h-[369px] p-[30px] flex flex-col justify-center items-center">
-              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white">
+              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white max-sm:text-center">
                 NEWS & UPDATE
               </h4>
               <div className="mt-[40px]">
@@ -328,7 +328,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[369px] bg-[#f1c50e] rounded-3xl h-[369px] p-[30px] flex flex-col justify-center items-center">
-              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-black">
+              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-black max-sm:text-center">
                 PROMOSI
               </h4>
               <div className="mt-[40px]">
@@ -351,7 +351,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[369px] bg-center bg-cover brightness-100 bg-[url('../assets/images/wewe.jpg')] rounded-3xl h-[369px] p-[30px] flex flex-col justify-center items-center">
-              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white">
+              <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white max-sm:text-center">
                 MEMBERSHIP
               </h4>
               <div className="mt-[40px]">
@@ -373,7 +373,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="relative z-0 h-full">
         <div className="bg-[#f1c50e] absolute z-10 w-full h-full"></div>
