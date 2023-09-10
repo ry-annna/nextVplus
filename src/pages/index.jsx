@@ -480,18 +480,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="">
+      <section className="">
         <div className="relative">
           <div className="bg-[#3a336f] absolute z-10 w-full h-full"></div>
           <div className="bg-[#f1c50e] w-full h-[536px] absolute z-20"></div>
           <div className="flex flex-col justify-center">
-            <div className="w-[1140px] mx-auto py-16 relative z-30">
-              <h1 className="text-[60px] font-Montserrat text-black font-bold text-center mb-11">
+            <div className="xl:w-[1140px] mx-auto py-16 relative z-30">
+              <h1 className="font-Montserrat text-black font-bold text-center mb-11 xl:text-[60px] max-sm:text-[36px]">
                 Good To Know
               </h1>
               {domLoaded && (
                 <div className="flex flex-wrap gap-4">
-                  <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2">
+                    <ReactPlayer
+                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
+                      width={"100%"}
+                      height={"100%"}
+                      light={
+                        <Image
+                          className="rounded-xl xl:w-[368px] xl:h-[364px]"
+                          src={tesImage}
+                          alt="Thumbnail"
+                        />
+                      }
+                    />
+                  </div>
+                  {/* <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
                     <ReactPlayer
                       url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
                       width={"100%"}
@@ -560,27 +574,13 @@ export default function Home() {
                         />
                       }
                     />
-                  </div>
-                  <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
-                    <ReactPlayer
-                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
-                      width={"100%"}
-                      height={"100%"}
-                      light={
-                        <Image
-                          className="rounded-xl w-[368px] h-[364px]"
-                          src={tesImage}
-                          alt="Thumbnail"
-                        />
-                      }
-                    />
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section>
         <div className="relative">
