@@ -496,13 +496,13 @@ export default function Home() {
                       url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
                       width={"100%"}
                       height={"100%"}
-                      // light={
-                      //   <Image
-                      //     className="rounded-xl xl:w-[368px] xl:h-[364px] h-[320px] object-cover"
-                      //     src={tesImage}
-                      //     alt="Thumbnail"
-                      //   />
-                      // }
+                      light={
+                        <Image
+                          className="rounded-xl xl:w-[368px] xl:h-[364px] h-[320px] object-cover"
+                          src={tesImage}
+                          alt="Thumbnail"
+                        />
+                      }
                     />
                   </div>
                   {/* <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
