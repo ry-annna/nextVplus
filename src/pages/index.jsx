@@ -486,95 +486,137 @@ export default function Home() {
           <div className="bg-[#f1c50e] w-full h-[536px] absolute z-20"></div>
           <div className="flex flex-col justify-center">
             <div className="xl:w-[1140px] mx-auto py-16 relative z-30">
-              <h1 className="font-Montserrat text-black font-bold text-center mb-11 xl:text-[60px] max-sm:text-[36px]">
+              <h1 className="font-Montserrat text-black font-bold text-center mb-11 xl:text-[60px] max-sm:text-[36px] sm:max-lg:text-[48px] lg:text-[60px]">
                 Good To Know
               </h1>
               {domLoaded && (
-                <div className="flex flex-wrap gap-4">
-                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px]">
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
                       url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl xl:w-[368px] xl:h-[364px] h-[320px] object-cover"
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
                           src={tesImage}
                           alt="Thumbnail"
                         />
                       }
                     />
                   </div>
-                  {/* <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
-                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
+                      url="https://youtu.be/G5ArJuqp0XE?si=2M8hTfnEmwl25a0p"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl w-[368px] h-[364px]"
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
                           src={tesImage}
                           alt="Thumbnail"
                         />
                       }
                     />
                   </div>
-                  <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
-                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
+                      url="https://youtu.be/dL1GzIO8kJI?si=MdylffBGFT6p3OHC"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl w-[368px] h-[364px]"
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
                           src={tesImage}
                           alt="Thumbnail"
                         />
                       }
                     />
                   </div>
-                  <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
-                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
+                      url="https://youtu.be/M12Us__0U3g?si=Dt0lL_IeAz6XEfVB"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl w-[368px] h-[364px]"
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
                           src={tesImage}
                           alt="Thumbnail"
                         />
                       }
                     />
                   </div>
-                  <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
-                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
+                      url="https://youtu.be/l3y1K7tSmIY?si=XHH-AQra6tOplI4O"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl w-[368px] h-[364px]"
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
                           src={tesImage}
                           alt="Thumbnail"
                         />
                       }
                     />
                   </div>
-                  <div className="w-[368px] h-[364px] rounded-xl overflow-hidden">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
-                      url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
+                      url="https://youtu.be/T92WgftMJGk?si=2gNRj3W8a5Q4D0wd"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl w-[368px] h-[364px]"
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
                           src={tesImage}
                           alt="Thumbnail"
                         />
                       }
                     />
-                  </div> */}
+                  </div>
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
+                    <ReactPlayer
+                      url="https://youtu.be/Ga2eG5d0MkI?si=klpJUTdpWfNgfu-X"
+                      width={"100%"}
+                      height={"100%"}
+                      light={
+                        <Image
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
+                          src={tesImage}
+                          alt="Thumbnail"
+                        />
+                      }
+                    />
+                  </div>
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
+                    <ReactPlayer
+                      url="https://youtu.be/Y2YJQ_aYB_I?si=a8puhG-bukki--Ol"
+                      width={"100%"}
+                      height={"100%"}
+                      light={
+                        <Image
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
+                          src={tesImage}
+                          alt="Thumbnail"
+                        />
+                      }
+                    />
+                  </div>
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
+                    <ReactPlayer
+                      url="https://youtu.be/2Mmzb68zxVg?si=H9pBiwfpQVsN6zY_"
+                      width={"100%"}
+                      height={"100%"}
+                      light={
+                        <Image
+                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
+                          src={tesImage}
+                          alt="Thumbnail"
+                        />
+                      }
+                    />
+                  </div>
                 </div>
               )}
             </div>
