@@ -491,14 +491,14 @@ export default function Home() {
               </h1>
               {domLoaded && (
                 <div className="flex flex-wrap gap-4">
-                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2">
+                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px]">
                     <ReactPlayer
                       url="https://youtu.be/Q-TGwIGBbjY?si=nCiFv3TwtJ_BWsrx"
                       width={"100%"}
                       height={"100%"}
                       light={
                         <Image
-                          className="rounded-xl xl:w-[368px] xl:h-[364px]"
+                          className="rounded-xl xl:w-[368px] xl:h-[364px] h-[320px] object-cover"
                           src={tesImage}
                           alt="Thumbnail"
                         />
