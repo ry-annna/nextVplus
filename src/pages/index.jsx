@@ -12,13 +12,16 @@ import logo22822726bebec51 from "../assets/images/2282272-6bebec51.png";
 import logo17156165ca5712 from "../assets/images/171561-65ca5712.png";
 import logo53523976a99baf from "../assets/images/535239-76a99baf.png";
 import logo159832139ed446 from "../assets/images/159832-139ed446.png";
-import logo95383126691a72 from "../assets/images/953831-26691a72.png";
+import logoQrLinktree from "../assets/images/qrLinktree.png";
 import logo561127c47308a4 from "../assets/images/561127-c47308a4.png";
 import bgbf5831c7be6125756483f38c1ca09a87 from "../assets/images/bf5831c7-be61-2575-6483-f38c1ca09a87.jpg";
 import bgwewe from "../assets/images/wewe.jpg";
 import bg4e7f28cbe9a64d5ca40fedcf9e022f52 from "../assets/images/4e7f28cb-e9a6-4d5c-a40f-edcf9e022f52.jpg";
 import bgmin from "../assets/images/-min.jpg";
+import tesBG from "../assets/images/Untitled design.png";
 import metatrader5multiassetplatform_2xremovebgpreview from "../assets/images/metatrader-5-multi-asset-platform_2x-removebg-preview.png";
+import { SiInstagram, SiYoutube, SiLinkedin, SiTiktok } from "react-icons/si";
+import Link from "next/link";
 
 export default function Home() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -46,8 +49,8 @@ export default function Home() {
         <div className="z-20 mx-auto mt-5 xl:w-[1140px]">
           <CustomCarousel />
 
-          <div className="relative flex flex-wrap items-center justify-center mt-10">
-            <div className="px-[20px] py-[35px] w-[276px] flex flex-col justify-start">
+          <div className="relative flex flex-wrap items-start justify-center mt-10">
+            <div className="px-[20px] py-[35px] w-[276px] flex flex-col justify-start ">
               <div className="mx-auto w-[145px] h-[145px] relative">
                 <div className="bg-[#f1c50e] absolute w-[118px] h-[118px] rounded-full mr-[-1px] ml-[28px] z-10"></div>
                 <Image
@@ -135,7 +138,7 @@ export default function Home() {
       <section className="relative h-max">
         <div className="xl:w-[1140px] mx-auto pt-[65px]">
           <h2 className="font-Montserrat font-bold text-center max-sm:text-[30px] max-sm:mb-[30px] sm:text-[60px] sm:mx-[60px] sm:mb-[50px] max-[390px]:mx-[10px]">
-            Mulai trading dengan 4 langkah
+            Start trading with 4 steps
           </h2>
           <div className="flex flex-wrap items-center justify-center w-full gap-9 max-sm:p-3">
             <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
@@ -143,44 +146,53 @@ export default function Home() {
                 Buka akun dengan mengisi email, nomor handphone dan data
                 pribadi.
               </p>
-              <button className="bg-[#f1c50e] mt-[20px] py-[18px] px-[30px] rounded-xl">
-                <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
-                  Daftar
-                </p>
-              </button>
+              <Link href="/realAkun">
+                <button className="bg-[#f1c50e] mt-[20px] py-[18px] px-[30px] rounded-xl">
+                  <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
+                    Daftar
+                  </p>
+                </button>
+              </Link>
             </div>
             <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
               <p className="text-black font-Open_Sans text-[20px] max-sm:text-center">
                 Verifikasi identitas dan data pribadi anda melalui tatap muka
                 atau video call dengan wakil pialang berjangka berlisensi.
               </p>
-              <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
-                <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
-                  Verifikasi
-                </p>
-              </button>
+              <Link href="/realAkun">
+                <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
+                  <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
+                    Verifikasi
+                  </p>
+                </button>
+              </Link>
             </div>
             <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
               <p className="text-black font-Open_Sans text-[20px] max-sm:text-center">
-                Lakukan deposit di bank - bank yang sudah terdaftar di BAPPEBTI
+                Lakukan deposit di bank - bank yang sudah terdaftar di{" "}
+                <span className="font-bold"> BAPPEBTI </span>
                 sebagai rekening terpisah broker.
               </p>
-              <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
-                <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
-                  Deposit
-                </p>
-              </button>
+              <Link href="/realAkun">
+                <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
+                  <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
+                    Deposit
+                  </p>
+                </button>
+              </Link>
             </div>
             <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
               <p className="text-white font-Open_Sans text-[20px] max-sm:text-center">
                 Dapatkan keuntungan dengan trading Forex, Emas, Minyak dan
                 Indeks.
               </p>
-              <button className="bg-[#f1c50e] mt-[20px] py-[18px] px-[30px] rounded-xl">
-                <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
-                  Trading
-                </p>
-              </button>
+              <Link href="/realAkun">
+                <button className="bg-[#f1c50e] mt-[20px] py-[18px] px-[30px] rounded-xl">
+                  <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
+                    Trading
+                  </p>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -203,11 +215,13 @@ export default function Home() {
                   <li>Order dalam 1x klik</li>
                 </ul>
 
-                <button className="max-md:mt-5 md:mt-[40px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] w-max max-sm:w-full">
-                  <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
-                    lebih lanjut
-                  </p>
-                </button>
+                <Link href="/realAkun">
+                  <button className="max-md:mt-5 md:mt-[40px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] w-max max-sm:w-full">
+                    <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
+                      lebih lanjut
+                    </p>
+                  </button>
+                </Link>
               </div>
 
               <div className="w-[266px]">
@@ -219,12 +233,13 @@ export default function Home() {
                   <li>Lebih dari 20 Alat Analisa Chart</li>
                   <li>3 Tipe Chart & 9 Timeframe</li>
                 </ul>
-
-                <button className="max-sm:mt-5 md:mt-[20px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] max-sm:w-full">
-                  <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
-                    lebih lanjut
-                  </p>
-                </button>
+                <Link href="/realAkun">
+                  <button className="max-sm:mt-5 md:mt-[20px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] max-sm:w-full">
+                    <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
+                      lebih lanjut
+                    </p>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -276,7 +291,8 @@ export default function Home() {
                 <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white max-sm:text-center">
                   TRADING
                 </h4>
-                <div className="mt-[40px]">
+                <div className="">
+                  {/* <Image src={tesBG} alt="" className="" /> */}
                   <svg
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 512 512"
@@ -403,7 +419,7 @@ export default function Home() {
         <div className="xl:w-[1140px] mx-auto relative z-20">
           <div className="flex flex-col items-center lg:pt-[100px] max-lg:pt-[30px] px-[20px] pb-[30px]">
             <h2 className="font-Montserrat text-white font-bold max-md:text-[32px] md:max-xl:text-[39px] xl:text-[48px] text-center">
-              Vplus membantu anda memahami trading
+              Vplus helps you understand trading
             </h2>
             <p className="text-[20px] font-Open_Sans text-white mt-[37px] text-center">
               Berbagai produk trading yang perlu anda ketahui.
@@ -467,14 +483,16 @@ export default function Home() {
           <div className="xl:w-[1140px] mx-auto py-16 relative z-20">
             <div className="lg:w-[570px] max-lg:w-full lg:h-[478px] p-[30px] bg-white rounded-3xl flex justify-center flex-col ">
               <h2 className="lg:text-[60px] max-md:text-[30px] md:max-xl:text-[45px] font-Montserrat text-black font-bold max-sm:leading-10">
-                Hasilkan Uang Dengan Klik
+                Make Money With Clicks
               </h2>
               <p className="md:text-[24px] max-md:text-[16px] font-Open_Sans mt-[20px]">
                 Hasilkan uang dengan klik melalui HP anda.
               </p>
-              <button className="uppercase text-[#3a336f] bg-[#f1c50e] mt-[20px] text-[12px] py-[15px] px-[41px] w-[172px] h-[50px] font-bold rounded-xl">
-                Learn More
-              </button>
+              <Link href="/realAkun">
+                <button className="uppercase text-[#3a336f] bg-[#f1c50e] mt-[20px] text-[12px] py-[15px] px-[41px] w-[172px] h-[50px] font-bold rounded-xl">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -624,74 +642,145 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section>
+      <section>
         <div className="relative">
-          <div className="bg-[#f1c50e] absolute z-10 w-full h-screen"></div>
-          <div className="bg-[#3a336f] w-full h-[250px] absolute z-20"></div>
+          <div className="bg-[#3a336f] absolute z-10 w-full h-full"></div>
           <div className="flex flex-col justify-center">
-            <div className="w-[1140px] mx-auto relative z-30 py-16">
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="bg-white w-[270px] h-[290px] p-[30px] rounded-2xl drop-shadow-2xl flex items-center flex-col">
-                  <Image
-                    src={logo53523976a99baf}
-                    alt=""
-                    className="w-[64px] h-[64px]"
-                  />
-                  <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                    OUR MAIN OFFICE
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
-                    Menara Rajawali 18th Floor, Jl. DR. Ide Anak Agung Gde Agung
-                    Lot 5, Jakarta Selatan, DKI Jakarta 12950
-                  </p>
+            <div className="xl:w-[1140px] mx-auto relative z-30 pb-16 max-xl:px-[40px]">
+              <div className="flex flex-wrap justify-between gap-8 max-md:justify-center">
+                <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                  <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
+                  <div className="relative top-0 z-20 flex flex-col items-center ">
+                    <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+                      <Image
+                        src={logo53523976a99baf}
+                        alt=""
+                        className="w-[74px] h-[74px]"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
+                        OUR MAIN OFFICE
+                      </h3>
+                      <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
+                        Menara Rajawali 18th Floor, Jl. DR. Ide Anak Agung Gde
+                        Agung Lot 5, Jakarta Selatan, DKI Jakarta 12950
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white w-[270px] h-[290px] p-[30px] rounded-2xl drop-shadow-2xl flex items-center flex-col">
-                  <Image
-                    src={logo159832139ed446}
-                    alt=""
-                    className="w-[64px] h-[64px]"
-                  />
-                  <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                    PHONE NUMBER
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
-                    0812-1100-1797
-                  </p>
-                  <p className="text-[16px] font-Open_Sans text-black text-center">
-                    021-576-1808
-                  </p>
+                <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                  <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
+                  <div className="relative top-0 z-20 flex flex-col items-center ">
+                    <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+                      <Image
+                        src={logo159832139ed446}
+                        alt=""
+                        className="w-[74px] h-[74px]"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
+                        PHONE NUMBER/FAX
+                      </h3>
+                      <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
+                        0812-1100-1797
+                      </p>
+                      <p className="text-[16px] font-Open_Sans text-black text-center">
+                        021-576-1808
+                      </p>
+                      <p className="text-[16px] font-Open_Sans text-black text-center">
+                        021-576-2710
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white w-[270px] h-[290px] p-[30px] rounded-2xl drop-shadow-2xl flex items-center flex-col">
-                  <Image
-                    src={logo95383126691a72}
-                    alt=""
-                    className="w-[64px] h-[64px]"
-                  />
-                  <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                    FAX
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
-                    021-576-2710
-                  </p>
+                <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                  <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
+                  <div className="relative top-0 z-20 flex flex-col items-center ">
+                    <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+                      <Image
+                        src={logo561127c47308a4}
+                        alt=""
+                        className="w-[74px] h-[74px]"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
+                        EMAIL
+                      </h3>
+                      <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
+                        <a href="mailto:digital@vplus.id">digital@vplus.id</a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white w-[270px] h-[290px] p-[30px] rounded-2xl drop-shadow-2xl flex items-center flex-col">
-                  <Image
-                    src={logo561127c47308a4}
-                    alt=""
-                    className="w-[64px] h-[64px]"
-                  />
-                  <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                    EMAIL
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[19px] text-[#3a336f] text-center underline font-bold ">
-                    <a href="mailto:digital@vplus.id">digital@vplus.id</a>
-                  </p>
+              </div>
+              <div className="mt-[50px]">
+                <h2 className="font-bold text-white uppercase font-Montserrat text-[30px]">
+                  disclaimer
+                </h2>
+                <p className="italic text-white text-[12px]">
+                  *Pemberitahuan Resiko
+                </p>
+                <p className="text-white text-[16px] mt-3">
+                  Produk dengan leverage memiliki tingkat risiko yang tinggi
+                  terhadap modal yang anda investasikan dan disarankan hanya
+                  menggunakan dana yang mampu anda tanggung apabila terjadi
+                  kerugian. Harap diketahui bahwa produk dengan leverage belum
+                  tentu cocok untuk semua orang, jadi pastikan anda telah
+                  memahami sepenuhnya semua risiko yang terlibat.
+                </p>
+              </div>
+              <div className="mt-[30px]">
+                <h2 className="font-bold text-white uppercase font-Montserrat text-[30px] max-sm:text-center">
+                  follow us
+                </h2>
+                <div className="mt-[15px] flex justify-between h-max max-sm:flex-col">
+                  <div className="flex gap-8 max-sm:flex-col">
+                    <div className="flex flex-col gap-5">
+                      <div className="flex gap-3 w-max">
+                        <SiInstagram className="w-[30px] h-[30px] text-[#f1c50e]" />
+                        <p className="font-semibold text-white">vplus.id</p>
+                      </div>
+                      <div className="flex gap-3 w-max">
+                        <SiYoutube className="w-[30px] h-[30px] text-[#f1c50e]" />
+                        <p className="font-semibold text-white">
+                          VPlus Platinum 8
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-5">
+                      <div className="flex gap-3 w-max">
+                        <SiLinkedin className="w-[30px] h-[30px] text-[#f1c50e]" />
+                        <p className="font-semibold text-white">
+                          VPlus Platinum 8 Indonesia
+                        </p>
+                      </div>
+                      <div className="flex gap-3 w-max">
+                        <SiTiktok className="w-[30px] h-[30px] text-[#f1c50e]" />
+                        <p className="font-semibold text-white">vplus.id</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="max-sm:mt-[25px] flex justify-center">
+                    <Image src={logoQrLinktree} alt="" className="w-[150px]" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+
+      <footer className="h-[95px] bg-[#333333] flex justify-center flex-col items-center">
+        <p className="sm:text-[14px] max-sm:text-[10px] font-Open_Sans text-white">
+          Associate with PT Victory International Futures Platinum 8
+        </p>
+        <p className="sm:text-[14px] max-sm:text-[10px] font-Open_Sans text-[#f1c50e]">
+          Copyright © 2​020 vplus.id. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }
