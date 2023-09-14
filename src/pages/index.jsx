@@ -3,7 +3,7 @@ import { TickerSymbolsVplus } from "../utils/listsGroup";
 import { useEffect, useState } from "react";
 import ButtonAkun from "../components/buttonAkun";
 import CustomCarousel from "@/components/customCarousel";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import Image from "next/image";
 import tesImage from "../assets/images/aa63897827a38c8f8ade5e61800d39a1439b62b992fadbd3b77a943106ca808409e02685f8e23ac168cbef30adb93860e346a2b9859dd61b99a15b_1280.jpg";
 import logo1159689536d100 from "../assets/images/115968-9536d100.png";
@@ -648,73 +648,88 @@ export default function Home() {
           <div className="flex flex-col justify-center">
             <div className="xl:w-[1140px] mx-auto relative z-30 pb-16 max-xl:px-[40px]">
               <div className="flex flex-wrap justify-between gap-8 max-md:justify-center">
-                <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
-                  <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
-                  <div className="relative top-0 z-20 flex flex-col items-center ">
-                    <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
-                      <Image
-                        src={logo53523976a99baf}
-                        alt=""
-                        className="w-[74px] h-[74px]"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                        OUR MAIN OFFICE
-                      </h3>
-                      <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
-                        Menara Rajawali 18th Floor, Jl. DR. Ide Anak Agung Gde
-                        Agung Lot 5, Jakarta Selatan, DKI Jakarta 12950
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
-                  <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
-                  <div className="relative top-0 z-20 flex flex-col items-center ">
-                    <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
-                      <Image
-                        src={logo159832139ed446}
-                        alt=""
-                        className="w-[74px] h-[74px]"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                        PHONE NUMBER/FAX
-                      </h3>
-                      <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
-                        0812-1100-1797
-                      </p>
-                      <p className="text-[16px] font-Open_Sans text-black text-center">
-                        021-576-1808
-                      </p>
-                      <p className="text-[16px] font-Open_Sans text-black text-center">
-                        021-576-2710
-                      </p>
+                <Link
+                  href="https://goo.gl/maps/ccnTM55KL5NG6P9N8"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                    <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
+                    <div className="relative top-0 z-20 flex flex-col items-center ">
+                      <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+                        <Image
+                          src={logo53523976a99baf}
+                          alt=""
+                          className="w-[74px] h-[74px]"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
+                          OUR MAIN OFFICE
+                        </h3>
+                        <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
+                          Menara Rajawali 18th Floor, Jl. DR. Ide Anak Agung Gde
+                          Agung Lot 5, Jakarta Selatan, DKI Jakarta 12950
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
-                  <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
-                  <div className="relative top-0 z-20 flex flex-col items-center ">
-                    <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
-                      <Image
-                        src={logo561127c47308a4}
-                        alt=""
-                        className="w-[74px] h-[74px]"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
-                        EMAIL
-                      </h3>
-                      <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
-                        <a href="mailto:digital@vplus.id">digital@vplus.id</a>
-                      </p>
+                </Link>
+                <Link
+                  href="https://api.whatsapp.com/send?phone=6281211001797"
+                  target="_blank"
+                >
+                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                    <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
+                    <div className="relative top-0 z-20 flex flex-col items-center ">
+                      <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+                        <Image
+                          src={logo159832139ed446}
+                          alt=""
+                          className="w-[74px] h-[74px]"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
+                          PHONE NUMBER/FAX
+                        </h3>
+                        <p className="text-[16px] font-Open_Sans mt-[19px] text-black text-center">
+                          0812-1100-1797
+                        </p>
+                        <p className="text-[16px] font-Open_Sans text-black text-center">
+                          021-576-1808
+                        </p>
+                        <p className="text-[16px] font-Open_Sans text-black text-center">
+                          021-576-2710
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
+                <Link href="mailto:digital@vplus.id" target="_blank">
+                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                    <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
+                    <div className="relative top-0 z-20 flex flex-col items-center ">
+                      <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+                        <Image
+                          src={logo561127c47308a4}
+                          alt=""
+                          className="w-[74px] h-[74px]"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-[20px] font-Montserrat text-[#3a336f] font-bold mt-[20px] text-center">
+                          EMAIL
+                        </h3>
+                        <div className="mt-[19px]">
+                          <p className="text-[16px] font-Open_Sans text-black text-center">
+                            digital@vplus.id
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </div>
               <div className="mt-[50px]">
                 <h2 className="font-bold text-white uppercase font-Montserrat text-[30px]">
@@ -739,32 +754,59 @@ export default function Home() {
                 <div className="mt-[15px] flex justify-between h-max max-sm:flex-col">
                   <div className="flex gap-8 max-sm:flex-col">
                     <div className="flex flex-col gap-5">
-                      <div className="flex gap-3 w-max">
-                        <SiInstagram className="w-[30px] h-[30px] text-[#f1c50e]" />
-                        <p className="font-semibold text-white">vplus.id</p>
-                      </div>
-                      <div className="flex gap-3 w-max">
-                        <SiYoutube className="w-[30px] h-[30px] text-[#f1c50e]" />
-                        <p className="font-semibold text-white">
-                          VPlus Platinum 8
-                        </p>
-                      </div>
+                      <Link
+                        href="https://www.instagram.com/vplus.id/"
+                        target="_blank"
+                      >
+                        <div className="flex gap-3 w-max">
+                          <SiInstagram className="w-[30px] h-[30px] text-[#f1c50e]" />
+                          <p className="font-semibold text-white">vplus.id</p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="https://youtube.com/@vplusplatinum8549?si=ciqJ4-095OTlTGOP"
+                        target="_blank"
+                      >
+                        <div className="flex gap-3 w-max">
+                          <SiYoutube className="w-[30px] h-[30px] text-[#f1c50e]" />
+                          <p className="font-semibold text-white">
+                            VPlus Platinum 8
+                          </p>
+                        </div>
+                      </Link>
                     </div>
+
                     <div className="flex flex-col gap-5">
-                      <div className="flex gap-3 w-max">
-                        <SiLinkedin className="w-[30px] h-[30px] text-[#f1c50e]" />
-                        <p className="font-semibold text-white">
-                          VPlus Platinum 8 Indonesia
-                        </p>
-                      </div>
-                      <div className="flex gap-3 w-max">
-                        <SiTiktok className="w-[30px] h-[30px] text-[#f1c50e]" />
-                        <p className="font-semibold text-white">vplus.id</p>
-                      </div>
+                      <Link
+                        href="https://www.linkedin.com/company/vplus-platinum-8-indonesia/"
+                        target="_blank"
+                      >
+                        <div className="flex gap-3 w-max">
+                          <SiLinkedin className="w-[30px] h-[30px] text-[#f1c50e]" />
+                          <p className="font-semibold text-white">
+                            VPlus Platinum 8 Indonesia
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="https://www.tiktok.com/@vplus.id"
+                        target="_blank"
+                      >
+                        <div className="flex gap-3 w-max">
+                          <SiTiktok className="w-[30px] h-[30px] text-[#f1c50e]" />
+                          <p className="font-semibold text-white">vplus.id</p>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="max-sm:mt-[25px] flex justify-center">
-                    <Image src={logoQrLinktree} alt="" className="w-[150px]" />
+                    <Link href="https://linktr.ee/vplus" target="_blank">
+                      <Image
+                        src={logoQrLinktree}
+                        alt=""
+                        className="w-[150px]"
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
