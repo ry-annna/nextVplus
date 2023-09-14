@@ -3,6 +3,7 @@ import { getAllBerita, getAllBerita2 } from "@/services/berita.service";
 import DefaultForm from "./form";
 import tesImage from "../../assets/images/aa63897827a38c8f8ade5e61800d39a1439b62b992fadbd3b77a943106ca808409e02685f8e23ac168cbef30adb93860e346a2b9859dd61b99a15b_1280.jpg";
 import { useEffect, useState } from "react";
+import SkeletonBerita from "@/components/skeletonBerita";
 
 const BeritaPage = () => {
   const [berita, setBerita] = useState([]);
@@ -14,18 +15,54 @@ const BeritaPage = () => {
     });
   }, []);
 
-  berita.forEach((element) => {
-    let base64String = btoa(
-      String.fromCharCode(...new Uint8Array(element.gambar.data))
+  // berita.forEach((element) => {
+  //   let base64String = btoa(
+  //     String.fromCharCode(...new Uint8Array(element.gambar.data))
+  //   );
+  // });
+
+  const showBeritas = () => {
+    return (
+      <>
+        {berita.map((item, index) => (
+          <div
+            className="flex py-[15px] px-[20px] border-b border-slate-200"
+            key={index}
+          >
+            <div className="flex flex-col justify-between">
+              <h1 className="text-[16px] font-semibold pr-[80px]">
+                {atob(item.title)}
+              </h1>
+              <div className="flex">
+                <p className="text-[12px] w-max text-slate-500">
+                  {atob(item.sumber)} | {item.tanggal}
+                </p>
+              </div>
+            </div>
+            <Image
+              src={tesImage}
+              width={180}
+              height={100}
+              className="w-[180px] rounded-lg"
+              alt=""
+            />
+          </div>
+        ))}
+      </>
     );
-    // setTesGambar(base64String);
-    // console.log(base64String);
-  });
-  // for (let i = 0; i < berita.length; i++) {
-  //   // const element = array[i];
-  //   console.log(i);
-  // }
-  // console.log(berita[0]);
+  };
+
+  const showSkeleton = () => {
+    return (
+      <>
+        {Array(10)
+          .fill()
+          .map((item, index) => {
+            return <SkeletonBerita key={index} />;
+          })}
+      </>
+    );
+  };
 
   return (
     <div className="flex justify-center">
@@ -34,34 +71,7 @@ const BeritaPage = () => {
           <h1 className="text-xl font-bold">Berita</h1>
         </div>
 
-        {berita.length > 0 &&
-          berita.map((item, index) => (
-            <div
-              className="flex py-[15px] px-[20px] border-b border-slate-200"
-              key={index}
-            >
-              <div className="flex flex-col justify-between">
-                <h1 className="text-[16px] font-semibold pr-[80px]">
-                  {atob(item.title)}
-                </h1>
-                <div className="flex">
-                  <p className="text-[12px] w-max text-slate-500">
-                    {atob(item.sumber)} | {item.tanggal}
-                  </p>
-                </div>
-              </div>
-              <Image
-                // src={`/${btoa(
-                //   String.fromCharCode(...new Uint8Array(item.gambar.data))
-                // )}`}
-                src={tesImage}
-                width={180}
-                height={100}
-                className="w-[180px] rounded-lg"
-                alt=""
-              />
-            </div>
-          ))}
+        {berita.length > 0 ? showBeritas() : showSkeleton()}
 
         {/* <div className="flex py-[15px] px-[20px] border-b border-slate-200">
           <div className="flex flex-col justify-between">

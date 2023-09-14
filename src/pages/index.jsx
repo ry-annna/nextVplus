@@ -752,7 +752,7 @@ export default function Home() {
                   follow us
                 </h2>
                 <div className="mt-[15px] flex justify-between h-max max-sm:flex-col">
-                  <div className="flex gap-8 max-sm:flex-col">
+                  <div className="flex gap-8 max-sm:flex-col max-sm:gap-5">
                     <div className="flex flex-col gap-5">
                       <Link
                         href="https://www.instagram.com/vplus.id/"

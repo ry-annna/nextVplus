@@ -1,8 +1,27 @@
 "use client";
 
 import { Label } from "flowbite-react";
+import { useState } from "react";
+import { postDemoAkun } from "@/services/demoAkun.service";
 
 const DemoAkunPage = () => {
+  const [formData, setFormData] = useState({
+    nama: "",
+    telp: "",
+    email: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await postDemoAkun(formData, (data) => {
+        console.log(data);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <section className="bg-[#3a336f] h-full pb-10">
@@ -18,7 +37,11 @@ const DemoAkunPage = () => {
               Demo Akun
             </h1>
             <div className="bg-white p-[30px] rounded-2xl xl:w-[711px]">
-              <form className="flex flex-col w-full gap-4">
+              <form
+                className="flex flex-col w-full gap-4"
+                onSubmit={handleSubmit}
+                id="demoAkunForm"
+              >
                 <div>
                   <div className="block mb-2">
                     <Label
@@ -29,6 +52,9 @@ const DemoAkunPage = () => {
                   </div>
 
                   <input
+                    onChange={(e) =>
+                      setFormData({ ...formData, nama: e.target.value })
+                    }
                     type="text"
                     id="nama"
                     placeholder="Masukan nama Anda"
@@ -47,6 +73,9 @@ const DemoAkunPage = () => {
                     </div>
 
                     <input
+                      onChange={(e) =>
+                        setFormData({ ...formData, telp: e.target.value })
+                      }
                       id="telepon"
                       required
                       type="text"
@@ -64,6 +93,9 @@ const DemoAkunPage = () => {
                     </div>
 
                     <input
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       id="email"
                       required
                       type="email"
@@ -97,6 +129,7 @@ const DemoAkunPage = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-[#f1c50e] h-full">
         <div className="xl:w-[1140px] flex justify-center mx-auto max-md:flex-col">
           <div className="xl:w-[570px] md:w-1/2 xl:h-[400px] md:p-[30px] max-md:px-[30px] max-md:pt-[30px]">

@@ -3,8 +3,26 @@
 import { Label } from "flowbite-react";
 import Image from "next/image";
 import logo9927040a3834e1 from "../assets/images/992704-0a3834e1.png";
+import { postRealAkun } from "@/services/realAkun.service";
+import { useState } from "react";
+import { data } from "autoprefixer";
 
 const RealAkunPage = () => {
+  const [formData, setFormData] = useState({
+    nama: "",
+    telp: "",
+    email: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await postRealAkun(formData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <section className="bg-[#3a336f] h-full">
@@ -66,7 +84,10 @@ const RealAkunPage = () => {
         <div className="xl:w-[1140px] mx-auto pb-[30px]">
           <div className="flex flex-col items-center justify-center my-10">
             <div className="bg-white p-[30px] rounded-2xl xl:w-[711px]">
-              <form className="flex flex-col w-full gap-4">
+              <form
+                className="flex flex-col w-full gap-4"
+                onSubmit={handleSubmit}
+              >
                 <div>
                   <div className="block mb-2">
                     <Label
@@ -77,6 +98,9 @@ const RealAkunPage = () => {
                   </div>
 
                   <input
+                    onChange={(e) =>
+                      setFormData({ ...formData, nama: e.target.value })
+                    }
                     type="text"
                     id="nama"
                     placeholder="Masukan nama Anda"
@@ -95,6 +119,9 @@ const RealAkunPage = () => {
                     </div>
 
                     <input
+                      onChange={(e) =>
+                        setFormData({ ...formData, telp: e.target.value })
+                      }
                       id="telepon"
                       required
                       type="text"
@@ -112,6 +139,9 @@ const RealAkunPage = () => {
                     </div>
 
                     <input
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       id="email"
                       required
                       type="email"
