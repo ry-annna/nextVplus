@@ -758,7 +758,7 @@ export default function Home() {
                         href="https://www.instagram.com/vplus.id/"
                         target="_blank"
                       >
-                        <div className="flex gap-3 w-max">
+                        <div className="flex items-center gap-3 w-max">
                           <SiInstagram className="w-[30px] h-[30px] text-[#f1c50e]" />
                           <p className="font-semibold text-white">vplus.id</p>
                         </div>
@@ -767,7 +767,7 @@ export default function Home() {
                         href="https://youtube.com/@vplusplatinum8549?si=ciqJ4-095OTlTGOP"
                         target="_blank"
                       >
-                        <div className="flex gap-3 w-max">
+                        <div className="flex items-center gap-3 w-max">
                           <SiYoutube className="w-[30px] h-[30px] text-[#f1c50e]" />
                           <p className="font-semibold text-white">
                             VPlus Platinum 8
@@ -781,7 +781,7 @@ export default function Home() {
                         href="https://www.linkedin.com/company/vplus-platinum-8-indonesia/"
                         target="_blank"
                       >
-                        <div className="flex gap-3 w-max">
+                        <div className="flex items-center gap-3 w-max">
                           <SiLinkedin className="w-[30px] h-[30px] text-[#f1c50e]" />
                           <p className="font-semibold text-white">
                             VPlus Platinum 8 Indonesia
@@ -792,7 +792,7 @@ export default function Home() {
                         href="https://www.tiktok.com/@vplus.id"
                         target="_blank"
                       >
-                        <div className="flex gap-3 w-max">
+                        <div className="flex items-center gap-3 w-max">
                           <SiTiktok className="w-[30px] h-[30px] text-[#f1c50e]" />
                           <p className="font-semibold text-white">vplus.id</p>
                         </div>
