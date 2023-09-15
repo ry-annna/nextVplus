@@ -6,6 +6,7 @@ import logo9927040a3834e1 from "../assets/images/992704-0a3834e1.png";
 import { postRealAkun } from "@/services/realAkun.service";
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
+import Link from "next/link";
 
 const RealAkunPage = () => {
   const toast = useToast();
@@ -21,12 +22,24 @@ const RealAkunPage = () => {
       const response = await postRealAkun(formData);
       if (response.status === 201) {
         toast({
-          title: "Data terkirim!",
-          description: "Silahkan tunggu konfirmasi dari kami.",
-          status: "success",
-          position: "top",
-          duration: 9000,
+          position: "bottom",
+          duration: 15000,
           isClosable: true,
+          render: () => (
+            <div className="flex flex-col items-center py-3 bg-green-500 px-7 xl:mb-10 rounded-xl">
+              <h2 className="text-center text-white font-Open_Sans">
+                Data terkirim!
+              </h2>
+              <p className="text-center text-white font-Open_Sans">
+                Silahkan isi form di halaman selanjutnya.
+              </p>
+              <Link href="https://www.vifx.co.id/r-936200006" target="_blank">
+                <button className="px-3 py-2 mt-2 text-white bg-green-700 font-Open_Sans rounded-xl hover:bg-green-600">
+                  Pergi ke halaman
+                </button>
+              </Link>
+            </div>
+          ),
         });
       } else {
         toast({
@@ -44,7 +57,7 @@ const RealAkunPage = () => {
   };
 
   return (
-    <div>
+    <>
       <section className="bg-[#3a336f] h-full">
         <div className="xl:w-[1140px] flex flex-wrap justify-center items-center mx-auto">
           <div className="w-[285px] h-[458px] max-[1140px]:h-full p-[30px] flex flex-col justify-start">
@@ -247,7 +260,7 @@ const RealAkunPage = () => {
           Copyright © 2​020 vplus.id. All rights reserved.
         </p>
       </footer>
-    </div>
+    </>
   );
 };
 

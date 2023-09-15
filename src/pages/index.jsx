@@ -18,7 +18,6 @@ import bgbf5831c7be6125756483f38c1ca09a87 from "../assets/images/bf5831c7-be61-2
 import bgwewe from "../assets/images/wewe.jpg";
 import bg4e7f28cbe9a64d5ca40fedcf9e022f52 from "../assets/images/4e7f28cb-e9a6-4d5c-a40f-edcf9e022f52.jpg";
 import bgmin from "../assets/images/-min.jpg";
-import tesBG from "../assets/images/Untitled design.png";
 import metatrader5multiassetplatform_2xremovebgpreview from "../assets/images/metatrader-5-multi-asset-platform_2x-removebg-preview.png";
 import { SiInstagram, SiYoutube, SiLinkedin, SiTiktok } from "react-icons/si";
 import Link from "next/link";
@@ -31,12 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <div className="flex justify-center w-full my-2 max-sm:gap-2 max-sm:px-1 md:hidden max-md:gap-14">
-        <ButtonAkun type="DEMO" />
-        <ButtonAkun type="REAL" />
-      </div>
-
+    <>
       <div>
         <TickerTape
           colorTheme="light"
@@ -823,6 +817,6 @@ export default function Home() {
           Copyright © 2​020 vplus.id. All rights reserved.
         </p>
       </footer>
-    </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { Label } from "flowbite-react";
 import { useState } from "react";
 import { postDemoAkun } from "@/services/demoAkun.service";
 import { useToast } from "@chakra-ui/react";
+import Link from "next/link";
 
 const DemoAkunPage = () => {
   const toast = useToast();
@@ -19,19 +20,31 @@ const DemoAkunPage = () => {
       const response = await postDemoAkun(formData);
       if (response.status === 201) {
         toast({
-          title: "Data terkirim!",
-          description: "Silahkan tunggu konfirmasi dari kami.",
-          status: "success",
-          position: "top",
-          duration: 9000,
+          position: "bottom",
+          duration: 15000,
           isClosable: true,
+          render: () => (
+            <div className="flex flex-col items-center py-3 bg-green-500 px-7 xl:mb-10 rounded-xl">
+              <h2 className="text-center text-white font-Open_Sans">
+                Data terkirim!
+              </h2>
+              <p className="text-center text-white font-Open_Sans">
+                Silahkan isi form di halaman selanjutnya.
+              </p>
+              <Link href="https://www.vifx.co.id/r-936200006" target="_blank">
+                <button className="px-3 py-2 mt-2 text-white bg-green-700 font-Open_Sans rounded-xl hover:bg-green-600">
+                  Pergi ke halaman
+                </button>
+              </Link>
+            </div>
+          ),
         });
       } else {
         toast({
           title: "Data tidak terkirim!",
           description: "Silahkan refresh halaman dan coba lagi.",
           status: "error",
-          position: "top",
+          position: "bottom",
           duration: 9000,
           isClosable: true,
         });

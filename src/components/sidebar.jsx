@@ -22,7 +22,7 @@ export default function MultiLevelDropdown() {
             <Sidebar.Item href="#">Produk Trading</Sidebar.Item>
             <Sidebar.Item href="#">Platform Trading</Sidebar.Item>
           </Sidebar.Collapse>
-          <Sidebar.Collapse label="Market Insight">
+          <Sidebar.Collapse label="Market">
             <Sidebar.Item href="/berita">Berita</Sidebar.Item>
             <Sidebar.Item href="#">Analisa</Sidebar.Item>
             <Sidebar.Item href="#">Kalender Ekonomi</Sidebar.Item>
