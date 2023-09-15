@@ -5,9 +5,10 @@ import Image from "next/image";
 import logo9927040a3834e1 from "../assets/images/992704-0a3834e1.png";
 import { postRealAkun } from "@/services/realAkun.service";
 import { useState } from "react";
-import { data } from "autoprefixer";
+import { useToast } from "@chakra-ui/react";
 
 const RealAkunPage = () => {
+  const toast = useToast();
   const [formData, setFormData] = useState({
     nama: "",
     telp: "",
@@ -18,6 +19,25 @@ const RealAkunPage = () => {
     e.preventDefault();
     try {
       const response = await postRealAkun(formData);
+      if (response.status === 201) {
+        toast({
+          title: "Data terkirim!",
+          description: "Silahkan tunggu konfirmasi dari kami.",
+          status: "success",
+          position: "top",
+          duration: 9000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Data tidak terkirim!",
+          description: "Silahkan refresh halaman dan coba lagi.",
+          status: "error",
+          position: "top",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
     } catch (error) {
       console.error(error);
     }

@@ -3,8 +3,10 @@
 import { Label } from "flowbite-react";
 import { useState } from "react";
 import { postDemoAkun } from "@/services/demoAkun.service";
+import { useToast } from "@chakra-ui/react";
 
 const DemoAkunPage = () => {
+  const toast = useToast();
   const [formData, setFormData] = useState({
     nama: "",
     telp: "",
@@ -14,16 +16,33 @@ const DemoAkunPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await postDemoAkun(formData, (data) => {
-        console.log(data);
-      });
+      const response = await postDemoAkun(formData);
+      if (response.status === 201) {
+        toast({
+          title: "Data terkirim!",
+          description: "Silahkan tunggu konfirmasi dari kami.",
+          status: "success",
+          position: "top",
+          duration: 9000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Data tidak terkirim!",
+          description: "Silahkan refresh halaman dan coba lagi.",
+          status: "error",
+          position: "top",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div>
+    <>
       <section className="bg-[#3a336f] h-full pb-10">
         <div className="xl:w-[1140px] mx-auto xl:py-16 max-xl:mx-4 md:max-lg:mx-10 max-md:pt-4 md:pt-10 ">
           <div className="border-4 border-[#f1c50e] flex justify-center rounded-3xl xl:p-[30px] max-md:p-[15px] md:max-xl:p-[15px]">
@@ -182,7 +201,7 @@ const DemoAkunPage = () => {
           Copyright © 2​020 vplus.id. All rights reserved.
         </p>
       </footer>
-    </div>
+    </>
   );
 };
 
