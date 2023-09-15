@@ -7,6 +7,12 @@ import vplus from "../assets/images/vplus.png";
 import logoMenu from "/src/assets/images/menu.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { FaRegChartBar } from "react-icons/fa";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { AiOutlineSliders } from "react-icons/ai";
+import { PiLightbulbBold } from "react-icons/pi";
+import { MdOutlineMapsHomeWork } from "react-icons/md";
+import { GrUserManager } from "react-icons/gr";
 
 const CustomNavbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -52,8 +58,8 @@ const CustomNavbar = () => {
                     data-dropdown-toggle="dropdownNavbar"
                     className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover:text-[#f1c50e] md:p-0 md:w-auto lg:"
                   >
-                    Trading{" "}
-                    <svg
+                    Trading <FaRegChartBar className="w-6 h-6 ml-2.5 " />
+                    {/* <svg
                       className="w-2.5 h-2.5 ml-2.5 group-hover:rotate-180 duration-300"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +73,7 @@ const CustomNavbar = () => {
                         strokeWidth="2"
                         d="m1 1 4 4 4-4"
                       />
-                    </svg>
+                    </svg> */}
                   </button>
 
                   <div
@@ -108,8 +114,8 @@ const CustomNavbar = () => {
                     data-dropdown-toggle="dropdownNavbar"
                     className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover:text-[#f1c50e] md:p-0 md:w-auto lg:"
                   >
-                    Market{" "}
-                    <svg
+                    Market <IoNewspaperOutline className="w-6 h-6 ml-2.5 " />
+                    {/* <svg
                       className="w-2.5 h-2.5 ml-2.5 group-hover:rotate-180 duration-300"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +129,7 @@ const CustomNavbar = () => {
                         strokeWidth="2"
                         d="m1 1 4 4 4-4"
                       />
-                    </svg>
+                    </svg> */}
                   </button>
 
                   <div
@@ -164,8 +170,8 @@ const CustomNavbar = () => {
                     data-dropdown-toggle="dropdownNavbar"
                     className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover:text-[#f1c50e] md:p-0 md:w-auto lg:"
                   >
-                    Edukasi{" "}
-                    <svg
+                    Edukasi <PiLightbulbBold className="w-6 h-6 ml-2.5 " />
+                    {/* <svg
                       className="w-2.5 h-2.5 ml-2.5 group-hover:rotate-180 duration-300"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +185,7 @@ const CustomNavbar = () => {
                         strokeWidth="2"
                         d="m1 1 4 4 4-4"
                       />
-                    </svg>
+                    </svg> */}
                   </button>
 
                   <div
@@ -218,10 +224,10 @@ const CustomNavbar = () => {
                   <button
                     id="dropdownNavbarLink"
                     data-dropdown-toggle="dropdownNavbar"
-                    className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover:text-[#f1c50e] md:p-0 md:w-auto lg:"
+                    className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover:text-[#f1c50e] md:p-0 md:w-auto "
                   >
-                    Company{" "}
-                    <svg
+                    Company <MdOutlineMapsHomeWork className="h-6 w-6 ml-2.5" />
+                    {/* <svg
                       className="w-2.5 h-2.5 ml-2.5 group-hover:rotate-180 duration-300"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +241,7 @@ const CustomNavbar = () => {
                         strokeWidth="2"
                         d="m1 1 4 4 4-4"
                       />
-                    </svg>
+                    </svg> */}
                   </button>
 
                   <div
@@ -270,14 +276,18 @@ const CustomNavbar = () => {
                     </ul>
                   </div>
                 </li>
-                <li>
-                  <button
-                    id="dropdownNavbarLink"
-                    data-dropdown-toggle="dropdownNavbar"
-                    className="flex items-center justify-between w-full py-2 pl-3 pr-4 hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#f1c50e] md:p-0 md:w-auto "
-                  >
-                    <Link href={"/"}>VCareer</Link>
-                  </button>
+                
+                <li className="group">
+                  <Link href={"/"}>
+                    <button
+                      id="dropdownNavbarLink"
+                      data-dropdown-toggle="dropdownNavbar"
+                      className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#f1c50e] md:p-0 md:w-auto "
+                    >
+                      VCareer
+                      
+                    </button>
+                  </Link>
                 </li>
               </ul>
               <div className="hidden md:block">
@@ -289,10 +299,10 @@ const CustomNavbar = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center w-full my-2 max-sm:gap-2 max-sm:px-1 md:hidden max-md:gap-14">
-        <ButtonAkun type="DEMO" />
-        <ButtonAkun type="REAL" />
-      </div>
+        <div className="flex justify-center w-full py-2 border-t max-sm:gap-2 max-sm:px-1 md:hidden max-md:gap-14 border-slate-200">
+          <ButtonAkun type="DEMO" />
+          <ButtonAkun type="REAL" />
+        </div>
       </div>
     </>
   );
