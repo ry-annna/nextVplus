@@ -9,10 +9,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaRegChartBar } from "react-icons/fa";
 import { IoNewspaperOutline } from "react-icons/io5";
-import { AiOutlineSliders } from "react-icons/ai";
 import { PiLightbulbBold } from "react-icons/pi";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
-import { GrUserManager } from "react-icons/gr";
 
 const CustomNavbar = () => {
   const [toggle, setToggle] = useState(false);
