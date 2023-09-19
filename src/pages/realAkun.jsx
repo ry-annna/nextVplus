@@ -7,6 +7,7 @@ import { postRealAkun } from "@/services/realAkun.service";
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import Link from "next/link";
+import CustomFooter from "@/components/customFooter";
 
 const RealAkunPage = () => {
   const toast = useToast();
@@ -252,14 +253,7 @@ const RealAkunPage = () => {
           </div>
         </div>
       </section>
-      <footer className="h-[95px] bg-[#333333] flex justify-center flex-col items-center">
-        <p className="sm:text-[14px] max-sm:text-[10px] font-Open_Sans text-white">
-          Associate with PT Victory International Futures Platinum 8
-        </p>
-        <p className="sm:text-[14px] max-sm:text-[10px] font-Open_Sans text-[#f1c50e]">
-          Copyright © 2​020 vplus.id. All rights reserved.
-        </p>
-      </footer>
+      <CustomFooter />
     </>
   );
 };

@@ -53,7 +53,7 @@ export const MainContentLists = [
   {
     id: 3,
     src: carousel3,
-    headline: "Meta Trader 5",
-    desc: "Meta trader 5 merupakan platform bagi para trader untuk bertransaksi di perdagangan berjangka yang telah disesuaikan dengan pergerakan harga global. Selain itu, Meta Trader 5 menyediakan instrument keuangan, termasuk forex, saham, dan futures. Menurut icdx Meta Trader 5 memiliki beberapa fitur keunggulan untuk meningkatkan pengalaman perdagangan bagi para trader, diantaranya adalah analisis kedalaman pasar, perdagangan Multi-Aset, alat analisis eknik yang luas, Expert (EA) terbesar, dan dukungan multi perangkat dan multi bahasa. @Ryan.",
+    headline: "MetaTrader5",
+    desc: "Platform unggulan Trader Profesional untuk bertransaksi di perdagangan berjangka dengan harga yang sesuai di Pasar Global. Menyediakan beragam produk keuangan, Komoditas, Mata Uang Asing, Index Saham dan Futures. Memiliki fitur-fitur unggulan demi meningkatkan pengalaman transaksi para trader dalam perdagangan berjangka.",
   },
 ];

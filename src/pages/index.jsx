@@ -21,6 +21,7 @@ import bgmin from "../assets/images/-min.jpg";
 import metatrader5multiassetplatform_2xremovebgpreview from "../assets/images/metatrader-5-multi-asset-platform_2x-removebg-preview.png";
 import { SiInstagram, SiYoutube, SiLinkedin, SiTiktok } from "react-icons/si";
 import Link from "next/link";
+import CustomFooter from "@/components/customFooter";
 
 export default function Home() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -561,48 +562,6 @@ export default function Home() {
                   </div>
                   <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
                     <ReactPlayer
-                      url="https://youtu.be/l3y1K7tSmIY?si=XHH-AQra6tOplI4O"
-                      width={"100%"}
-                      height={"100%"}
-                      light={
-                        <Image
-                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
-                          src={tesImage}
-                          alt="Thumbnail"
-                        />
-                      }
-                    />
-                  </div>
-                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
-                    <ReactPlayer
-                      url="https://youtu.be/T92WgftMJGk?si=2gNRj3W8a5Q4D0wd"
-                      width={"100%"}
-                      height={"100%"}
-                      light={
-                        <Image
-                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
-                          src={tesImage}
-                          alt="Thumbnail"
-                        />
-                      }
-                    />
-                  </div>
-                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
-                    <ReactPlayer
-                      url="https://youtu.be/Ga2eG5d0MkI?si=klpJUTdpWfNgfu-X"
-                      width={"100%"}
-                      height={"100%"}
-                      light={
-                        <Image
-                          className="rounded-xl object-cover xl:w-[368px] xl:h-[364px] h-[320px] w-[300px]"
-                          src={tesImage}
-                          alt="Thumbnail"
-                        />
-                      }
-                    />
-                  </div>
-                  <div className="xl:w-[368px] xl:h-[364px] rounded-xl overflow-hidden max-sm:mx-2 h-[320px] ">
-                    <ReactPlayer
                       url="https://youtu.be/Y2YJQ_aYB_I?si=a8puhG-bukki--Ol"
                       width={"100%"}
                       height={"100%"}
@@ -808,15 +767,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="h-[95px] bg-[#333333] flex justify-center flex-col items-center">
-        <p className="sm:text-[14px] max-sm:text-[10px] font-Open_Sans text-white">
-          Associate with PT Victory International Futures Platinum 8
-        </p>
-        <p className="sm:text-[14px] max-sm:text-[10px] font-Open_Sans text-[#f1c50e]">
-          Copyright © 2​020 vplus.id. All rights reserved.
-        </p>
-      </footer>
+      <CustomFooter />
     </>
   );
 }
