@@ -48,7 +48,7 @@ export const MainContentLists = [
     id: 2,
     src: carousel2,
     headline: "Autochartist",
-    desc: "Salah satu paket yang dimiliki oleh autichartist dirancang untuk memenuhi kebutuhan trader modern, untuk itu dengan kalian bergabung sebagai nasabah di VPlus dan melakukan transaksi minimal $2000 kalian akan mendapatkan gratis autochartist.",
+    desc: "Salah satu paket yang dimiliki oleh autochartist dirancang untuk memenuhi kebutuhan trader modern, untuk itu dengan kalian bergabung sebagai nasabah di VPlus dan melakukan transaksi minimal $2000 kalian akan mendapatkan gratis autochartist.",
   },
   {
     id: 3,
