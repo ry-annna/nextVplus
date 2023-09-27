@@ -2,12 +2,11 @@ import axios from "axios";
 
 export const getAllBerita = async (callback) => {
   try {
-    const response = await axios.get(`https://tes-be.vercel.app/berita`);
+    const response = await axios.get(
+      process.env.BASE_URL_API_BERITA || "http://localhost:3000/api/berita"
+    );
     callback(response.data.data);
-    // console.log(response.data);
-    // return data;
   } catch (error) {
     console.error(error);
-    // response.status(500).send("Error fetching data");
   }
 };
