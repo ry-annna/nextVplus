@@ -6,6 +6,7 @@ import { postDemoAkun } from "@/services/demoAkun.service";
 import { useToast } from "@chakra-ui/react";
 import Link from "next/link";
 import CustomFooter from "@/components/customFooter";
+import Head from "next/head";
 
 const DemoAkunPage = () => {
   const toast = useToast();
@@ -57,6 +58,14 @@ const DemoAkunPage = () => {
 
   return (
     <>
+      <Head>
+        <meta name="keywords" content="Legalitas, Disclaimer" />
+        <meta
+          name="description"
+          content="Website Resmi Vplus Platinum 8 - Associate with PT Victory International Futures. Legal, Resmi &amp; Terpercaya, Rekening Terpisah, Tanpa Dealing, Semua Robot diperbolehkan, Tersedia Edukasi, Penarikan Dana Bebas dan Mudah, dan Spread Rendah."
+        />
+        <title>Akun Demo</title>
+      </Head>
       <section className="bg-[#3a336f] h-full pb-10">
         <div className="xl:w-[1140px] mx-auto xl:py-16 max-xl:mx-4 md:max-lg:mx-10 max-md:pt-4 md:pt-10 ">
           <div className="border-4 border-[#f1c50e] flex justify-center rounded-3xl xl:p-[30px] max-md:p-[15px] md:max-xl:p-[15px]">
@@ -207,7 +216,7 @@ const DemoAkunPage = () => {
           </div>
         </div>
       </section>
-      <CustomFooter/>
+      <CustomFooter />
     </>
   );
 };

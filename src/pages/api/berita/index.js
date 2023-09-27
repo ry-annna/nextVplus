@@ -1,5 +1,12 @@
 const UsersModel = require("./models/index.js");
 
+// import type { NextApiRequest, NextApiResponse } from "next";
+import { createRouter, expressWrapper } from "next-connect";
+import cors from "cors";
+const multer = require("multer");
+
+const router = createRouter();
+
 export default async function handler(req, res) {
   if (req.method === "GET") {
     try {

@@ -9,7 +9,7 @@ import { MdVerifiedUser } from "react-icons/md";
 const ButtonAkun = (props) => {
   const { type } = props;
   return (
-    <Link href={`${type === "DEMO" ? "/demoAkun" : "/realAkun"}`}>
+    <Link href={`${type === "DEMO" ? "/demo-akun" : "/real-akun"}`}>
       <button className="text-white items-center py-3 px-4 rounded-md flex gap-2 hover:scale-105 duration-300 hover:text-black hover:bg-[#f1c50e] bg-[#3a336f] max-sm:h-fit sm:max-md:flex sm:max-md:justify-center sm:max-md:w-[200px] md:max-lg:w-[144px] lg:max-xl:w-[138px] lg:text-sm xl:text-base">
         {type === "DEMO" ? (
           <Image

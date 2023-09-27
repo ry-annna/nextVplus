@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import Link from "next/link";
 import CustomFooter from "@/components/customFooter";
+import Head from "next/head";
 
 const RealAkunPage = () => {
   const toast = useToast();
@@ -59,6 +60,14 @@ const RealAkunPage = () => {
 
   return (
     <>
+      <Head>
+        <meta name="keywords" content="Legalitas, Disclaimer" />
+        <meta
+          name="description"
+          content="Website Resmi Vplus Platinum 8 - Associate with PT Victory International Futures. Legal, Resmi &amp; Terpercaya, Rekening Terpisah, Tanpa Dealing, Semua Robot diperbolehkan, Tersedia Edukasi, Penarikan Dana Bebas dan Mudah, dan Spread Rendah."
+        />
+        <title>Akun Real</title>
+      </Head>
       <section className="bg-[#3a336f] h-full">
         <div className="xl:w-[1140px] flex flex-wrap justify-center items-center mx-auto">
           <div className="w-[285px] h-[458px] max-[1140px]:h-full p-[30px] flex flex-col justify-start">

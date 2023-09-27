@@ -22,6 +22,7 @@ import metatrader5multiassetplatform_2xremovebgpreview from "../assets/images/me
 import { SiInstagram, SiYoutube, SiLinkedin, SiTiktok } from "react-icons/si";
 import Link from "next/link";
 import CustomFooter from "@/components/customFooter";
+import Head from "next/head";
 
 export default function Home() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -32,6 +33,19 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta
+          name="keywords"
+          content="trading, trading adalah, trading forex, olymp trade, hector trade, apa itu trading, apa itu trading forex, trading adalah, trading itu apa, apa itu bisnis trading, apa itu trading, arti trading forex, forex trading, forex, apa sih forex, forex trading adalah, broker adalah, apa itu broker, arti broker, broker terbaik, broker terpercaya, broker aman, broker resmi, broker legal, broker indonesia, profit, profit adalah, apa itu profit, apa yang dimaksud dengan profit, profit adalah, vplus, vplus id, vplus platinum 8, apa itu vplus, vplus indonesia, vplus adalah, victory international futures, vif platinum 8, victory international futures platinum 8, harga emas hari ini, harga emas, 1 gram emas, beli emas, emas, sinyal trading, autochartist, sinyal harian forex, sinyal trading forex, sinyal forex trading, sinyal forex harian, sinyal forex autochartist"
+        />
+        <meta
+          name="description"
+          content="Website Resmi Vplus Platinum 8 - Associate with PT Victory International Futures. Legal, Resmi &amp; Terpercaya, Rekening Terpisah, Tanpa Dealing, Semua Robot diperbolehkan, Tersedia Edukasi, Penarikan Dana Bebas dan Mudah, dan Spread Rendah."
+        />
+        <title>
+          Vplus Platinum 8 - Associate With PT Victory International Futures
+        </title>
+      </Head>
       <div>
         <TickerTape
           colorTheme="light"

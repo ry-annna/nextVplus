@@ -65,15 +65,16 @@ const BeritaPage = () => {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="w-[620px] flex flex-col items-center h-screen border-r border-l border-slate-200">
-        <div className="flex w-full px-[20px] border-b items-center py-4">
-          <h1 className="text-xl font-bold">Berita</h1>
-        </div>
+    <>
+      <div className="flex justify-center">
+        <div className="w-[620px] flex flex-col items-center h-screen border-r border-l border-slate-200">
+          <div className="flex w-full px-[20px] border-b items-center py-4">
+            <h1 className="text-xl font-bold">Berita</h1>
+          </div>
 
-        {berita.length > 0 ? showBeritas() : showSkeleton()}
+          {berita.length > 0 ? showBeritas() : showSkeleton()}
 
-        {/* <div className="flex py-[15px] px-[20px] border-b border-slate-200">
+          {/* <div className="flex py-[15px] px-[20px] border-b border-slate-200">
           <div className="flex flex-col justify-between">
             <h1 className="text-[16px] font-semibold pr-[80px]">
               UK Seizes on US-China Thaw as Chance for Reset With Beijing
@@ -86,9 +87,10 @@ const BeritaPage = () => {
           </div>
           <Image src={tesImage} className="w-[180px] rounded-lg" alt="" />
         </div> */}
-        {/* <DefaultForm /> */}
+          {/* <DefaultForm /> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
