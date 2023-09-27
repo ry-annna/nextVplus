@@ -5,7 +5,7 @@ import { createRouter, expressWrapper } from "next-connect";
 import cors from "cors";
 const multer = require("multer");
 
-const router = createRouter();
+// const router = createRouter();
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
