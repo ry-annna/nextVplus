@@ -5,8 +5,9 @@ export const getAllBerita = async (callback) => {
     const response = await axios.get(
       process.env.BASE_URL_API_BERITA || "http://localhost:3000/api/berita"
     );
+
     callback(response.data.data);
   } catch (error) {
-    console.error(error);
+    return error;
   }
 };

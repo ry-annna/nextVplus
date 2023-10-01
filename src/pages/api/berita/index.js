@@ -1,37 +1,43 @@
 const UsersModel = require("./models/index.js");
-
-// import type { NextApiRequest, NextApiResponse } from "next";
-import { createRouter, expressWrapper } from "next-connect";
-import cors from "cors";
+import { createRouter } from "next-connect";
 const multer = require("multer");
 
-// const router = createRouter();
+const router = createRouter();
 
-export default async function handler(req, res) {
-  if (req.method === "GET") {
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/gambarBerita");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "_" + file.originalname);
+  },
+});
+const upload = multer({
+  storage: storage,
+});
+
+router
+  .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllBerita();
+      // console.log(data);
       // const imageData = imageDataRaw.gambar;
-      const jsonData = JSON.stringify(data);
-
-      const imageBuffer = Buffer.from(data[0].gambar, "base64");
-      const titleDecode = atob(data[0].title);
-      const deskripsiDecode = atob(data[0].deskripsi);
-      const sumberDecode = atob(data[0].sumber);
-      // fs.writeFileSync("tes.jpg", imageBuffer);
+      // const imageBuffer = Buffer.from(data[0].gambar, "base64");
+      // const titleDecode = atob(data[0].title);
+      // const deskripsiDecode = atob(data[0].deskripsi);
+      // const sumberDecode = atob(data[0].sumber);
 
       res.json({
         status: 200,
         message: "GET all berita sukses",
-        // data: [
-        //   {
-        //     title: titleDecode,
-        //     deskripsi: deskripsiDecode,
-        //     sumber: sumberDecode,
-        //     gambar: imageBuffer,
-        //   },
-        // ],
-        data: data,
+        data: [
+          ...data,
+          // {
+          //   title: atob(data[0].title),
+          //   deskripsi: atob(data[0].deskripsi),
+          //   sumber: atob(data[0].sumber),
+          // },
+        ],
       });
     } catch (error) {
       res.status(500).json({
@@ -39,14 +45,13 @@ export default async function handler(req, res) {
         serverMessage: error,
       });
     }
-  } else if (req.method === "POST") {
-    const { body } = req;
+  })
+  .post(upload.single("gambar"), async (req, res) => {
     try {
-      await UsersModel.createNewBerita(body);
+      await UsersModel.createNewBerita(req);
       res.status(201).json({
         status: 201,
         message: "CREATE new berita sukses",
-        data: req.body.gambar,
       });
     } catch (error) {
       res.status(500).json({
@@ -54,5 +59,17 @@ export default async function handler(req, res) {
         serverMessage: error,
       });
     }
-  }
-}
+  });
+
+export default router.handler({
+  onError: (err, req, res) => {
+    console.error(err.stack);
+    res.status(err.statusCode || 500).end(err.message);
+  },
+});
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};

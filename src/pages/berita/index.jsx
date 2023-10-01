@@ -1,13 +1,12 @@
 import Image from "next/image";
-import { getAllBerita, getAllBerita2 } from "@/services/berita.service";
-import DefaultForm from "./form";
-import tesImage from "../../assets/images/aa63897827a38c8f8ade5e61800d39a1439b62b992fadbd3b77a943106ca808409e02685f8e23ac168cbef30adb93860e346a2b9859dd61b99a15b_1280.jpg";
+import { getAllBerita } from "@/services/berita.service";
 import { useEffect, useState } from "react";
 import SkeletonBerita from "@/components/skeletonBerita";
+import moment from "moment/moment";
+import Link from "next/link";
 
 const BeritaPage = () => {
   const [berita, setBerita] = useState([]);
-  const [tesGambar, setTesGambar] = useState([]);
 
   useEffect(() => {
     getAllBerita((data) => {
@@ -15,38 +14,39 @@ const BeritaPage = () => {
     });
   }, []);
 
-  // berita.forEach((element) => {
-  //   let base64String = btoa(
-  //     String.fromCharCode(...new Uint8Array(element.gambar.data))
-  //   );
-  // });
-
   const showBeritas = () => {
     return (
       <>
         {berita.map((item, index) => (
-          <div
-            className="flex py-[15px] px-[20px] border-b border-slate-200"
+          <Link
+            href={`/berita/${atob(item.title)}`}
             key={index}
+            className="w-full"
           >
-            <div className="flex flex-col justify-between">
-              <h1 className="text-[16px] font-semibold pr-[80px]">
-                {atob(item.title)}
-              </h1>
-              <div className="flex">
-                <p className="text-[12px] w-max text-slate-500">
-                  {atob(item.sumber)} | {item.tanggal}
-                </p>
+            <div
+              className="flex py-[15px] px-[20px] border-b border-slate-200 w-full justify-between"
+              key={index}
+            >
+              <div className="left-0 flex flex-col justify-between">
+                <h1 className="text-[16px] font-semibold pr-[80px]">
+                  {atob(item.title)}
+                </h1>
+                <div className="flex">
+                  <p className="text-[12px] w-max text-slate-500">
+                    {atob(item.sumber)} |{" "}
+                    {moment.utc(item.tanggal).format("MMM Do, YYYY")}
+                  </p>
+                </div>
               </div>
+              <Image
+                src={`/gambarBerita/${item.gambar}`}
+                width={180}
+                height={100}
+                className="w-[180px] rounded-lg "
+                alt=""
+              />
             </div>
-            <Image
-              src={tesImage}
-              width={180}
-              height={100}
-              className="w-[180px] rounded-lg"
-              alt=""
-            />
-          </div>
+          </Link>
         ))}
       </>
     );
@@ -73,21 +73,6 @@ const BeritaPage = () => {
           </div>
 
           {berita.length > 0 ? showBeritas() : showSkeleton()}
-
-          {/* <div className="flex py-[15px] px-[20px] border-b border-slate-200">
-          <div className="flex flex-col justify-between">
-            <h1 className="text-[16px] font-semibold pr-[80px]">
-              UK Seizes on US-China Thaw as Chance for Reset With Beijing
-            </h1>
-            <div className="flex">
-              <p className="text-[12px] w-max text-slate-500">
-                sumber | 30 Agustus 2023
-              </p>
-            </div>
-          </div>
-          <Image src={tesImage} className="w-[180px] rounded-lg" alt="" />
-        </div> */}
-          {/* <DefaultForm /> */}
         </div>
       </div>
     </>
