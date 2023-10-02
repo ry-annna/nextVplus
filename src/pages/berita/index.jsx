@@ -26,6 +26,7 @@ const BeritaPage = () => {
             <div
               className="flex py-[15px] px-[20px] border-b border-slate-200 w-full justify-between"
               key={index}
+              loading="lazy"
             >
               <div className="left-0 flex flex-col justify-between">
                 <h1 className="text-[16px] font-semibold pr-[80px]">
