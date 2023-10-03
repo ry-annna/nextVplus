@@ -1,6 +1,6 @@
 const UsersModel = require("./models/index.js");
 import { createRouter } from "next-connect";
-
+const cors = require("cors");
 const multer = require("multer");
 
 const router = createRouter();
@@ -17,7 +17,15 @@ const upload = multer({
   storage: storage,
 });
 
+const corsOptions = {
+  origin: process.env.BASE_URL || "http://localhost:3000",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+  optionsSuccessStatus: 200,
+};
+
 router
+  .use(cors(corsOptions))
   .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllBerita();
