@@ -1,22 +1,16 @@
 const UsersModel = require("./models/real-akun.js");
+import { createRouter } from "next-connect";
 
-export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { body } = req;
-    try {
-      await UsersModel.createNewUser(body);
-      res.status(201).json({
-        status: 201,
-        message: "CREATE new user sukses",
-      });
-    } catch (error) {
-      res.status(500).json({
-        status: 500,
-        message: "CREATE new user gagal",
-        serverMessage: error,
-      });
-    }
-  } else if (req.method === "GET") {
+const router = createRouter();
+
+router
+  .use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+  })
+  .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllUsers();
 
@@ -32,5 +26,20 @@ export default async function handler(req, res) {
         serverMessage: error,
       });
     }
-  }
-}
+  })
+  .post(async (req, res) => {
+    const { body } = req;
+    try {
+      await UsersModel.createNewUser(body);
+      res.status(201).json({
+        status: 201,
+        message: "CREATE new user sukses",
+      });
+    } catch (error) {
+      res.status(500).json({
+        status: 500,
+        message: "CREATE new user gagal",
+        serverMessage: error,
+      });
+    }
+  });

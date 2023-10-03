@@ -1,7 +1,5 @@
 const UsersModel = require("./models/index.js");
 import { createRouter } from "next-connect";
-const cors = require("cors");
-const nextCors = require("nextjs-cors");
 const multer = require("multer");
 
 const router = createRouter();
@@ -50,11 +48,8 @@ router
     next();
   })
   .get(async (req, res) => {
-    // const origin = req.headers.get("origin");
     try {
       const [data] = await UsersModel.getAllBerita();
-
-      // const resData = await data.JSON();
 
       res.json({
         status: 200,
