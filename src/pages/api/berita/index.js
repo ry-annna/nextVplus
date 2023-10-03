@@ -20,7 +20,7 @@ const upload = multer({
 
 const corsOptions = {
   credential: true,
-  origin: "*",
+  origin: ["http://localhost:3000", "https://next-vplus.vercel.app"],
   methods: ["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
   allowedHeaders: [
     "X-CSRF-Token",
@@ -41,36 +41,21 @@ const corsConfig = {
   origin: true,
 };
 
-// router.all("*", cors(corsConfig));
-
 router
   .use(cors(corsOptions))
   .get(async (req, res) => {
-    const origin = req.headers.origin;
+    const origin = req.headers.get("origin");
     try {
       const [data] = await UsersModel.getAllBerita();
-      // console.log(data);
-      // const imageData = imageDataRaw.gambar;
-      // const imageBuffer = Buffer.from(data[0].gambar, "base64");
-      // const titleDecode = atob(data[0].title);
-      // const deskripsiDecode = atob(data[0].deskripsi);
-      // const sumberDecode = atob(data[0].sumber);
 
       res.json({
         status: 200,
         message: "GET all berita sukses",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": origin || "*",
-        },
-        data: [
-          ...data,
-          // {
-          //   title: atob(data[0].title),
-          //   deskripsi: atob(data[0].deskripsi),
-          //   sumber: atob(data[0].sumber),
-          // },
-        ],
+        // headers: {
+        //   "Access-Control-Allow-Origin": origin || "*",
+        //   "Content-Type": "application/json",
+        // },
+        data: [...data],
       });
     } catch (error) {
       res.status(500).json({
