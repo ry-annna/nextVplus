@@ -1,5 +1,6 @@
 const UsersModel = require("./models/index.js");
 import { createRouter } from "next-connect";
+
 const multer = require("multer");
 
 const router = createRouter();
