@@ -20,11 +20,7 @@ const upload = multer({
 
 const corsOptions = {
   credential: true,
-  origin: [
-    "http://localhost:3000",
-    "https://next-vplus.vercel.app",
-    "https://www.next-vplus.vercel.app",
-  ],
+  origin: ["http://localhost:3000", "https://vplus.id", "https://www.vplus.id"],
   methods: ["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
   allowedHeaders: [
     "X-CSRF-Token",
