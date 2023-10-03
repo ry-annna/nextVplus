@@ -18,9 +18,19 @@ const upload = multer({
 });
 
 const corsOptions = {
-  origin: process.env.BASE_URL || "http://localhost:3000",
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
+  origin: "*",
+  methods: ["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
+  allowedHeaders: [
+    "X-CSRF-Token",
+    "X-Requested-With",
+    "Accept",
+    "Accept-Version",
+    "Content-Length",
+    "Content-MD5",
+    "Content-Type",
+    "Date",
+    "X-Api-Version",
+  ],
   optionsSuccessStatus: 200,
 };
 
