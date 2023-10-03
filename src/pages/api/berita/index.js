@@ -42,18 +42,19 @@ const corsConfig = {
 };
 
 router
-  .use(cors(corsOptions))
+  // .use(cors(corsOptions))
   .get(async (req, res) => {
-    const origin = req.headers.get("origin");
+    // const origin = req.headers.get("origin");
     try {
       const [data] = await UsersModel.getAllBerita();
+
+      // const resData = await data.JSON();
 
       res.json({
         status: 200,
         message: "GET all berita sukses",
         headers: {
-          "Access-Control-Allow-Origin": origin || "*",
-          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
         data: [...data],
       });
