@@ -3,7 +3,8 @@ import axios from "axios";
 export const getAllBerita = async (callback) => {
   try {
     const response = await axios.get(
-      process.env.BASE_URL_API_BERITA || "http://localhost:3000/api/berita"
+      "https://next-vplus.vercel.app/api/berita" ||
+        "http://localhost:3000/api/berita"
     );
 
     callback(response.data.data);
