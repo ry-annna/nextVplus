@@ -36,7 +36,7 @@ const corsOptions = {
 };
 
 router
-
+  .use(cors({ credentials: true, origin: "http://localhost:3000" }))
   .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllBerita();
