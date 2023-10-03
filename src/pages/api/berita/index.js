@@ -44,8 +44,9 @@ const corsConfig = {
 // router.all("*", cors(corsConfig));
 
 router
-  .use(nextCors())
+  .use(cors(corsOptions))
   .get(async (req, res) => {
+    const origin = req.headers.origin;
     try {
       const [data] = await UsersModel.getAllBerita();
       // console.log(data);
@@ -58,6 +59,10 @@ router
       res.json({
         status: 200,
         message: "GET all berita sukses",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": origin || "*",
+        },
         data: [
           ...data,
           // {
@@ -69,6 +74,7 @@ router
       });
     } catch (error) {
       res.status(500).json({
+        status: 500,
         message: "GET all berita gagal",
         serverMessage: error,
       });
