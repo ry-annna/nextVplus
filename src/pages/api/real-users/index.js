@@ -17,6 +17,9 @@ router
       res.json({
         status: 200,
         message: "GET all users sukses",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        }
         data: data,
       });
     } catch (error) {
@@ -34,6 +37,9 @@ router
       res.status(201).json({
         status: 201,
         message: "CREATE new user sukses",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        }
       });
     } catch (error) {
       res.status(500).json({

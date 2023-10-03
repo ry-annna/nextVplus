@@ -73,6 +73,9 @@ router
       res.status(201).json({
         status: 201,
         message: "CREATE new berita sukses",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
       });
     } catch (error) {
       res.status(500).json({
