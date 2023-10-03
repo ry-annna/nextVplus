@@ -1,5 +1,8 @@
 const nextConfig = {
   reactStrictMode: true,
+};
+
+module.exports = {
   async headers() {
     return [
       {
