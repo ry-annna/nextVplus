@@ -20,7 +20,11 @@ const upload = multer({
 
 const corsOptions = {
   credential: true,
-  origin: ["http://localhost:3000", "https://next-vplus.vercel.app"],
+  origin: [
+    "http://localhost:3000",
+    "https://next-vplus.vercel.app",
+    "https://www.next-vplus.vercel.app",
+  ],
   methods: ["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
   allowedHeaders: [
     "X-CSRF-Token",
@@ -51,10 +55,10 @@ router
       res.json({
         status: 200,
         message: "GET all berita sukses",
-        // headers: {
-        //   "Access-Control-Allow-Origin": origin || "*",
-        //   "Content-Type": "application/json",
-        // },
+        headers: {
+          "Access-Control-Allow-Origin": origin || "*",
+          "Content-Type": "application/json",
+        },
         data: [...data],
       });
     } catch (error) {
