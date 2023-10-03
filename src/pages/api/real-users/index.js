@@ -19,7 +19,7 @@ router
         message: "GET all users sukses",
         headers: {
           "Access-Control-Allow-Origin": "*",
-        }
+        },
         data: data,
       });
     } catch (error) {
@@ -39,7 +39,7 @@ router
         message: "CREATE new user sukses",
         headers: {
           "Access-Control-Allow-Origin": "*",
-        }
+        },
       });
     } catch (error) {
       res.status(500).json({
