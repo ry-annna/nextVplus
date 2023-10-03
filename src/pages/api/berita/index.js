@@ -35,8 +35,14 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
+const corsConfig = {
+  credentials: true,
+  origin: true,
+};
+
+router.all("*", cors(corsConfig));
+
 router
-  .use(cors({ credentials: true, origin: "https://next-vplus.vercel.app" }))
   .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllBerita();
