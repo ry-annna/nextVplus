@@ -36,7 +36,7 @@ const corsOptions = {
 };
 
 router
-  .use(cors(corsOptions))
+
   .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllBerita();
