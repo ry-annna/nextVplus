@@ -40,9 +40,10 @@ const corsConfig = {
   origin: true,
 };
 
-router.all("*", cors(corsConfig));
+// router.all("*", cors(corsConfig));
 
 router
+  .use(cors(corsConfig))
   .get(async (req, res) => {
     try {
       const [data] = await UsersModel.getAllBerita();
