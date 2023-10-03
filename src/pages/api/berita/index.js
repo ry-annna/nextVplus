@@ -18,6 +18,7 @@ const upload = multer({
 });
 
 const corsOptions = {
+  credential: true,
   origin: "*",
   methods: ["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
   allowedHeaders: [
