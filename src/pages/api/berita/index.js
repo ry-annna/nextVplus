@@ -68,6 +68,7 @@ router
     }
   })
   .post(upload.single("gambar"), async (req, res) => {
+    // console.log(req.body);
     try {
       await UsersModel.createNewBerita(req);
       res.status(201).json({

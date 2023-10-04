@@ -31,9 +31,8 @@ router
     }
   })
   .post(async (req, res) => {
-    const { body } = req;
     try {
-      await UsersModel.createNewUser(body);
+      await UsersModel.createNewUser(req.body);
       res.status(201).json({
         status: 201,
         message: "CREATE new user sukses",
@@ -49,3 +48,16 @@ router
       });
     }
   });
+
+export default router.handler({
+  onError: (err, req, res) => {
+    console.error(err.stack);
+    res.status(err.statusCode || 500).end(err.message);
+  },
+});
+
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };

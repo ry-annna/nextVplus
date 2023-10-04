@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { createNewBerita } from "@/services/berita.service";
+import { useToast } from "@chakra-ui/react";
 
 const UploadBeritaPage = () => {
+  const toast = useToast();
   const [file, setFile] = useState();
   const [formDatas, setFormDatas] = useState({
     gambar: "",
@@ -21,14 +24,30 @@ const UploadBeritaPage = () => {
       formData.append("title", formDatas.title);
       formData.append("deskripsi", formDatas.deskripsi);
       formData.append("sumber", formDatas.sumber);
-      axios
-        .post(
-          process.env.BASE_URL_API_BERITA || "http://localhost:3000/api/berita",
-          formData,
-          config
-        )
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+      const response = await createNewBerita(formData, config);
+      if (response.status === 201) {
+        toast({
+          position: "bottom",
+          duration: 15000,
+          isClosable: true,
+          render: () => (
+            <div className="flex flex-col items-center py-3 bg-green-500 px-7 xl:mb-10 rounded-xl">
+              <h2 className="text-center text-white font-Open_Sans">
+                Data terkirim!
+              </h2>
+            </div>
+          ),
+        });
+      } else {
+        toast({
+          title: "Data tidak terkirim!",
+          description: "Silahkan refresh halaman dan coba lagi.",
+          status: "error",
+          position: "bottom",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
     } catch (error) {
       console.error(error);
     }
@@ -85,7 +104,7 @@ const UploadBeritaPage = () => {
                 id="title"
                 placeholder="Masukan title berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] focus:outline-none border-1 border-slate-300 focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
-                // required
+                required
               />
             </div>
             <div>
@@ -107,7 +126,7 @@ const UploadBeritaPage = () => {
                     })
                 }
                 id="desciption"
-                // required
+                required
                 type="text"
                 placeholder="Masukan deskripsi berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] focus:outline-none border-1 border-slate-300 focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
@@ -132,7 +151,7 @@ const UploadBeritaPage = () => {
                     })
                 }
                 id="sumber"
-                // required
+                required
                 type="text"
                 placeholder="Masukan sumber berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] border-1 border-slate-300 focus:outline-none focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"

@@ -10,7 +10,7 @@ import Head from "next/head";
 
 const DemoAkunPage = () => {
   const toast = useToast();
-  const [formData, setFormData] = useState({
+  const [formDatas, setFormDatas] = useState({
     nama: "",
     telp: "",
     email: "",
@@ -19,7 +19,15 @@ const DemoAkunPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await postDemoAkun(formData);
+      // const config = {
+      //   headers: { "content-type": "multipart/form-data" },
+      // };
+      // const formData = new FormData();
+      // formData.append("nama", formDatas.nama);
+      // formData.append("telp", formDatas.telp);
+      // formData.append("email", formDatas.email);
+
+      const response = await postDemoAkun(formDatas);
       if (response.status === 201) {
         toast({
           position: "bottom",
@@ -95,7 +103,7 @@ const DemoAkunPage = () => {
 
                   <input
                     onChange={(e) =>
-                      setFormData({ ...formData, nama: e.target.value })
+                      setFormDatas({ ...formDatas, nama: e.target.value })
                     }
                     type="text"
                     id="nama"
@@ -116,7 +124,7 @@ const DemoAkunPage = () => {
 
                     <input
                       onChange={(e) =>
-                        setFormData({ ...formData, telp: e.target.value })
+                        setFormDatas({ ...formDatas, telp: e.target.value })
                       }
                       id="telepon"
                       required
@@ -136,7 +144,7 @@ const DemoAkunPage = () => {
 
                     <input
                       onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
+                        setFormDatas({ ...formDatas, email: e.target.value })
                       }
                       id="email"
                       required
