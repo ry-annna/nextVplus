@@ -1,5 +1,6 @@
 const UsersModel = require("./models/index.js");
 import { createRouter } from "next-connect";
+import express from "express";
 const multer = require("multer");
 
 const router = createRouter();
@@ -40,7 +41,6 @@ const corsConfig = {
 };
 
 router
-  // .use(cors(corsOptions))
   .use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -68,7 +68,6 @@ router
     }
   })
   .post(upload.single("gambar"), async (req, res) => {
-    // console.log(req.body);
     try {
       await UsersModel.createNewBerita(req);
       res.status(201).json({

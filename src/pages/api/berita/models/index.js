@@ -2,7 +2,7 @@ const dbPool = require("../../config/database.js");
 const fs = require("fs");
 
 const getAllBerita = () => {
-  const SQLQuery = "SELECT * FROM `berita`";
+  const SQLQuery = "SELECT * FROM `berita` ORDER BY tanggal DESC";
 
   return dbPool.execute(SQLQuery);
 };

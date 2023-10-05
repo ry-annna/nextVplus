@@ -80,6 +80,7 @@ const UploadBeritaPage = () => {
                 id="myfile"
                 name="myfile"
                 onChange={(e) => setFile(e.target.files[0])}
+                required
               />
             </div>
             <div>

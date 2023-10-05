@@ -28,7 +28,6 @@ const DetailBerita = () => {
                 <div
                   className="flex flex-col py-[15px] px-[20px] border-b border-slate-200 w-full justify-between"
                   key={index}
-                  loading="lazy"
                 >
                   <div className="left-0 flex flex-col justify-between gap-2">
                     {/* <div className="w-full h-[180px]">
@@ -52,6 +51,9 @@ const DetailBerita = () => {
                   </div>
                   <div className="mt-6">
                     <p>{atob(item.deskripsi)}</p>
+                    {/* <p>
+                      lorem300
+                    </p> */}
                   </div>
                 </div>
               );
