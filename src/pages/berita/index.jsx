@@ -15,6 +15,7 @@ const BeritaPage = () => {
   }, []);
 
   const showBeritas = () => {
+    const baseURL = "https://vplus.id/gambarBerita/";
     return (
       <>
         {berita.map((item, index) => (
@@ -41,6 +42,9 @@ const BeritaPage = () => {
               </div>
               <Image
                 src={`/gambarBerita/${item.gambar}`}
+                // src={`${baseURL}${item.gambar}`}
+                // src={`${baseURL}1695956650970_Carousel%201.png`}
+                // src={`https://vplus.id/gambarBerita/1695956650970_Carousel%201.png?w=384&q=75`}
                 width={180}
                 height={100}
                 className="w-[180px] rounded-lg "
