@@ -40,10 +40,8 @@ const BeritaPage = () => {
                 </div>
               </div>
               <Image
-                src={`/gambarBerita/${item.gambar}`}
-                // src={`${baseURL}${item.gambar}`}
-                // src={`${baseURL}1695956650970_Carousel%201.png`}
-                // src={`https://vplus.id/gambarBerita/1695956650970_Carousel%201.png?w=384&q=75`}
+                src={`${process.env.NEXT_PUBLIC_BASE_URL}${item.gambar}`}
+                unoptimized
                 width={180}
                 height={100}
                 className="w-[180px] rounded-lg "
