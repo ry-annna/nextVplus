@@ -2,11 +2,7 @@ import axios from "axios";
 
 export const getAllBerita = async (callback) => {
   try {
-    const response = await axios.get(
-      process.env.NODE_ENV === "production"
-        ? "https://vplus.id/api/berita"
-        : "http://localhost:3000/api/berita"
-    );
+    const response = await axios.get("https://images.vplus.id/berita");
 
     callback(response.data.data);
   } catch (error) {
@@ -16,12 +12,8 @@ export const getAllBerita = async (callback) => {
 
 export const createNewBerita = async (body, callback) => {
   try {
-    const response = await axios.post(
-      process.env.NODE_ENV === "production"
-        ? "https://vplus.id/api/berita"
-        : "http://localhost:3000/api/berita",
-      body
-    );
+    const response = await axios.post("https://images.vplus.id/berita", body);
+
     return response.data;
   } catch (error) {
     return error;

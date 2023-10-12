@@ -24,7 +24,9 @@ const UploadBeritaPage = () => {
       formData.append("title", formDatas.title);
       formData.append("deskripsi", formDatas.deskripsi);
       formData.append("sumber", formDatas.sumber);
+
       const response = await createNewBerita(formData, config);
+      console.log(response.message);
       if (response.status === 201) {
         toast({
           position: "bottom",
@@ -60,6 +62,7 @@ const UploadBeritaPage = () => {
           <h1 className="items-center text-2xl font-bold uppercase">
             upload berita
           </h1>
+
           {/* <img
             className="w-[300px] h-[300px]"
             src={`'data:image/jpg+xml;base64,' + ${btoa(
@@ -80,7 +83,7 @@ const UploadBeritaPage = () => {
                 id="myfile"
                 name="myfile"
                 onChange={(e) => setFile(e.target.files[0])}
-                required
+                // required
               />
             </div>
             <div>
@@ -92,20 +95,20 @@ const UploadBeritaPage = () => {
 
               <textarea
                 onChange={
-                  // (e) => setFormData({ ...formData, title: e.target.value })
-                  (e) =>
-                    setFormDatas({
-                      ...formDatas,
-                      title: window.btoa(
-                        unescape(encodeURIComponent(e.target.value))
-                      ),
-                    })
+                  (e) => setFormDatas({ ...formDatas, title: e.target.value })
+                  // (e) =>
+                  //   setFormDatas({
+                  //     ...formDatas,
+                  //     title: window.btoa(
+                  //       unescape(encodeURIComponent(e.target.value))
+                  //     ),
+                  //   })
                 }
                 type="text"
                 id="title"
                 placeholder="Masukan title berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] focus:outline-none border-1 border-slate-300 focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
-                required
+                // required
               />
             </div>
             <div>
@@ -117,7 +120,8 @@ const UploadBeritaPage = () => {
 
               <textarea
                 onChange={
-                  // (e) => setFormData({ ...formData, deskripsi: e.target.value })
+                  // (e) =>
+                  //   setFormDatas({ ...formDatas, deskripsi: e.target.value })
                   (e) =>
                     setFormDatas({
                       ...formDatas,
@@ -142,17 +146,17 @@ const UploadBeritaPage = () => {
 
               <input
                 onChange={
-                  // (e) => setFormData({ ...formData, sumber: e.target.value })
-                  (e) =>
-                    setFormDatas({
-                      ...formDatas,
-                      sumber: window.btoa(
-                        unescape(encodeURIComponent(e.target.value))
-                      ),
-                    })
+                  (e) => setFormDatas({ ...formDatas, sumber: e.target.value })
+                  // (e) =>
+                  //   setFormDatas({
+                  //     ...formDatas,
+                  //     sumber: window.btoa(
+                  //       unescape(encodeURIComponent(e.target.value))
+                  //     ),
+                  //   })
                 }
                 id="sumber"
-                required
+                // required
                 type="text"
                 placeholder="Masukan sumber berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] border-1 border-slate-300 focus:outline-none focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
@@ -165,6 +169,7 @@ const UploadBeritaPage = () => {
             >
               SUBMIT
             </button>
+            {/* {formDatas.deskripsi && <p>{atob(formDatas.deskripsi)}</p>} */}
           </form>
         </div>
       </div>

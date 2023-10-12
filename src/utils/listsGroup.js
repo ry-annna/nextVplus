@@ -1,6 +1,6 @@
-import carousel1 from "../assets/images/Carousel 1.png";
-import carousel2 from "../assets/images/Carousel 2.png";
-import carousel3 from "../assets/images/Carousel 3.png";
+import carousel1 from "../assets/images/Carousel1.png";
+import carousel2 from "../assets/images/Carousel2.png";
+import carousel3 from "../assets/images/Carousel3.png";
 
 export const TickerSymbolsVplus = [
   {
