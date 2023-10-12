@@ -63,14 +63,6 @@ const UploadBeritaPage = () => {
             upload berita
           </h1>
 
-          {/* <img
-            className="w-[300px] h-[300px]"
-            src={`'data:image/jpg+xml;base64,' + ${btoa(
-              unescape(encodeURIComponent(formData.gambar))
-            )}`}
-            alt=""
-          /> */}
-          {/* <p>{formData.gambar}</p> */}
           <form
             className="flex flex-col w-full gap-4"
             onSubmit={handleSubmit}
@@ -83,7 +75,7 @@ const UploadBeritaPage = () => {
                 id="myfile"
                 name="myfile"
                 onChange={(e) => setFile(e.target.files[0])}
-                // required
+                required
               />
             </div>
             <div>
@@ -95,20 +87,20 @@ const UploadBeritaPage = () => {
 
               <textarea
                 onChange={
-                  (e) => setFormDatas({ ...formDatas, title: e.target.value })
-                  // (e) =>
-                  //   setFormDatas({
-                  //     ...formDatas,
-                  //     title: window.btoa(
-                  //       unescape(encodeURIComponent(e.target.value))
-                  //     ),
-                  //   })
+                  // (e) => setFormDatas({ ...formDatas, title: e.target.value })
+                  (e) =>
+                    setFormDatas({
+                      ...formDatas,
+                      title: window.btoa(
+                        unescape(encodeURIComponent(e.target.value))
+                      ),
+                    })
                 }
                 type="text"
                 id="title"
                 placeholder="Masukan title berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] focus:outline-none border-1 border-slate-300 focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
-                // required
+                required
               />
             </div>
             <div>
@@ -146,17 +138,17 @@ const UploadBeritaPage = () => {
 
               <input
                 onChange={
-                  (e) => setFormDatas({ ...formDatas, sumber: e.target.value })
-                  // (e) =>
-                  //   setFormDatas({
-                  //     ...formDatas,
-                  //     sumber: window.btoa(
-                  //       unescape(encodeURIComponent(e.target.value))
-                  //     ),
-                  //   })
+                  // (e) => setFormDatas({ ...formDatas, sumber: e.target.value })
+                  (e) =>
+                    setFormDatas({
+                      ...formDatas,
+                      sumber: window.btoa(
+                        unescape(encodeURIComponent(e.target.value))
+                      ),
+                    })
                 }
                 id="sumber"
-                // required
+                required
                 type="text"
                 placeholder="Masukan sumber berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] border-1 border-slate-300 focus:outline-none focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
