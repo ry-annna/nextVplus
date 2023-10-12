@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const nextConfig = {
   reactStrictMode: true,
   images: {

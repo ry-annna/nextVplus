@@ -3,7 +3,7 @@ import axios from "axios";
 export const postDemoAkun = async (body) => {
   try {
     const response = await axios.post(
-      "https://images.vplus.id/demo-users",
+      `${process.env.NEXT_PUBLIC_DEMOUSER_URL}`,
       body
     );
 

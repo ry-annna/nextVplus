@@ -15,7 +15,6 @@ const BeritaPage = () => {
   }, []);
 
   const showBeritas = () => {
-    const baseURL = "https://vplus.id/gambarBerita/";
     return (
       <>
         {berita.map((item, index) => (
