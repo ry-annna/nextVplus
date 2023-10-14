@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { createNewBerita } from "@/services/berita.service";
 import { useToast } from "@chakra-ui/react";
+import MyQuillEditor from "@/utils/quillEditor";
 
 const UploadBeritaPage = () => {
   const toast = useToast();
@@ -110,24 +111,29 @@ const UploadBeritaPage = () => {
                 </label>
               </div>
 
-              <textarea
+              <MyQuillEditor
+                value={formDatas.deskripsi}
+                onChange={(e) => setFormDatas({ ...formDatas, deskripsi: e })}
+              />
+
+              {/* <textarea
                 onChange={
-                  // (e) =>
-                  //   setFormDatas({ ...formDatas, deskripsi: e.target.value })
                   (e) =>
-                    setFormDatas({
-                      ...formDatas,
-                      deskripsi: window.btoa(
-                        unescape(encodeURIComponent(e.target.value))
-                      ),
-                    })
+                    setFormDatas({ ...formDatas, deskripsi: e.target.value })
+                  // (e) =>
+                  //   setFormDatas({
+                  //     ...formDatas,
+                  //     deskripsi: window.btoa(
+                  //       unescape(encodeURIComponent(e.target.value))
+                  //     ),
+                  //   })
                 }
                 id="desciption"
                 required
                 type="text"
                 placeholder="Masukan deskripsi berita"
                 className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] focus:outline-none border-1 border-slate-300 focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
-              />
+              /> */}
             </div>
             <div>
               <div className="block mb-2">
