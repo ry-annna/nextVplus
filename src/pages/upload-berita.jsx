@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { createNewBerita } from "@/services/berita.service";
 import { useToast } from "@chakra-ui/react";
 import MyQuillEditor from "@/utils/quillEditor";
+import Parser from "html-react-parser";
 
 const UploadBeritaPage = () => {
   const toast = useToast();
@@ -58,7 +58,7 @@ const UploadBeritaPage = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center h-screen bg-slate-200">
+      <div className="flex justify-center h-full bg-slate-200">
         <div className="flex flex-col items-center w-10/12">
           <h1 className="items-center text-2xl font-bold uppercase">
             upload berita
@@ -104,37 +104,7 @@ const UploadBeritaPage = () => {
                 required
               />
             </div>
-            <div>
-              <div className="block mb-2">
-                <label htmlFor="desciption" className="text-[16px]">
-                  DESCRIPTION
-                </label>
-              </div>
 
-              <MyQuillEditor
-                value={formDatas.deskripsi}
-                onChange={(e) => setFormDatas({ ...formDatas, deskripsi: e })}
-              />
-
-              {/* <textarea
-                onChange={
-                  (e) =>
-                    setFormDatas({ ...formDatas, deskripsi: e.target.value })
-                  // (e) =>
-                  //   setFormDatas({
-                  //     ...formDatas,
-                  //     deskripsi: window.btoa(
-                  //       unescape(encodeURIComponent(e.target.value))
-                  //     ),
-                  //   })
-                }
-                id="desciption"
-                required
-                type="text"
-                placeholder="Masukan deskripsi berita"
-                className="w-full px-3 py-2 rounded-lg placeholder:opacity-50 placeholder:italic max-xl:placeholder:text-[13px] focus:outline-none border-1 border-slate-300 focus:border-[#f1c50e] focus:ring-[#f1c50e] focus:ring-2"
-              /> */}
-            </div>
             <div>
               <div className="block mb-2">
                 <label htmlFor="sumber" className="text-[16px]">
@@ -161,14 +131,28 @@ const UploadBeritaPage = () => {
               />
             </div>
 
+            <div>
+              <div className="block mb-2">
+                <label htmlFor="desciption" className="text-[16px]">
+                  DESCRIPTION
+                </label>
+              </div>
+
+              <MyQuillEditor
+                value={formDatas.deskripsi}
+                onChange={(e) => setFormDatas({ ...formDatas, deskripsi: e })}
+              />
+            </div>
+
             <button
               type="submit"
               className="bg-[#3a336f] drop-shadow-2xl hover:bg-white rounded-lg hover:text-[#3a336f] hover:ring-2 hover:ring-[#f1c50e] py-3 text-white font-Open_Sans font-semibold"
             >
               SUBMIT
             </button>
-            {/* {formDatas.deskripsi && <p>{atob(formDatas.deskripsi)}</p>} */}
           </form>
+
+          <div className="mt-6 ql-editor">{Parser(formDatas.deskripsi)}</div>
         </div>
       </div>
     </>

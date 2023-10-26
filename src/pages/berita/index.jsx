@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import SkeletonBerita from "@/components/skeletonBerita";
 import moment from "moment/moment";
 import Link from "next/link";
+import Head from "next/head";
 
 const BeritaPage = () => {
   const [berita, setBerita] = useState([]);
@@ -26,14 +27,13 @@ const BeritaPage = () => {
             <div
               className="flex py-[15px] px-[20px] border-b border-slate-200 w-full justify-between"
               key={index}
-              loading="lazy"
             >
               <div className="left-0 flex flex-col justify-between">
-                <h1 className="text-[16px] font-semibold pr-[80px]">
+                <h1 className="text-[16px] font-semibold md:pr-[80px] font-Open_Sans">
                   {atob(item.title)}
                 </h1>
                 <div className="flex">
-                  <p className="text-[12px] w-max text-slate-500">
+                  <p className="text-[12px] w-max text-slate-500 font-Open_Sans">
                     {atob(item.sumber)} |{" "}
                     {moment.utc(item.tanggal).format("MMM Do, YYYY")}
                   </p>
@@ -44,7 +44,7 @@ const BeritaPage = () => {
                 unoptimized
                 width={180}
                 height={100}
-                className="w-[180px] rounded-lg "
+                className=" object-cover rounded-lg xl:w-[180px] xl:h-[100px] max-sm:w-[112px] max-sm:h-[60px] sm:max-md:w-[140px] sm:max-md:h-[70px] md:max-lg:w-[180px] md:max-lg:h-[100px] lg:max-xl:w-[180px] lg:max-xl:h-[100px]"
                 alt=""
               />
             </div>

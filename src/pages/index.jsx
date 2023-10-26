@@ -150,12 +150,12 @@ export default function Home() {
             Start trading with 4 steps
           </h2>
           <div className="flex flex-wrap items-center justify-center w-full gap-9 max-sm:p-3">
-            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl flex flex-col justify-between max-lg:h-max ">
               <p className="text-white font-Open_Sans text-[20px] max-sm:text-center">
                 Buka akun dengan mengisi email, nomor handphone dan data
                 pribadi.
               </p>
-              <Link href="/realAkun">
+              <Link href="/real-akun" className="flex max-sm:justify-center">
                 <button className="bg-[#f1c50e] mt-[20px] py-[18px] px-[30px] rounded-xl">
                   <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
                     Daftar
@@ -163,12 +163,12 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl flex flex-col justify-between max-lg:h-max">
               <p className="text-black font-Open_Sans text-[20px] max-sm:text-center">
                 Verifikasi identitas dan data pribadi anda melalui tatap muka
                 atau video call dengan wakil pialang berjangka berlisensi.
               </p>
-              <Link href="/realAkun">
+              <Link href="/real-akun" className="flex max-sm:justify-center">
                 <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
                   <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
                     Verifikasi
@@ -176,13 +176,13 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+            <div className="w-[545px] h-[271px] bg-[#f1c50e] p-[30px] rounded-3xl flex flex-col justify-between max-lg:h-max">
               <p className="text-black font-Open_Sans text-[20px] max-sm:text-center">
                 Lakukan deposit di bank - bank yang sudah terdaftar di{" "}
                 <span className="font-bold"> BAPPEBTI </span>
                 sebagai rekening terpisah broker.
               </p>
-              <Link href="/realAkun">
+              <Link href="/real-akun" className="flex max-sm:justify-center">
                 <button className="bg-white mt-[20px] py-[18px] px-[30px] rounded-xl">
                   <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
                     Deposit
@@ -190,12 +190,12 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl max-sm:flex max-sm:flex-col max-sm:justify-center max-lg:h-max">
+            <div className="w-[545px] h-[271px] bg-[#3a336f] p-[30px] rounded-3xl flex flex-col justify-between max-lg:h-max">
               <p className="text-white font-Open_Sans text-[20px] max-sm:text-center">
                 Dapatkan keuntungan dengan trading Forex, Emas, Minyak dan
                 Indeks.
               </p>
-              <Link href="/realAkun">
+              <Link href="/real-akun" className="flex max-sm:justify-center">
                 <button className="bg-[#f1c50e] mt-[20px] py-[18px] px-[30px] rounded-xl">
                   <p className="font-Open_Sans text-[12px] uppercase text-[#3a336f] font-bold">
                     Trading
@@ -214,17 +214,19 @@ export default function Home() {
               Platform Trading
             </h1>
             <div className="flex justify-center w-max mt-[20px] max-sm:flex-col max-sm:gap-5">
-              <div className="w-[266px]">
-                <h3 className="text-[20px] font-Open_Sans font-bold">
-                  Web Trader
-                </h3>
-                <ul className="list-disc ">
-                  <li>Tidak perlu tambahan software</li>
-                  <li>Eksekusi Cepat</li>
-                  <li>Order dalam 1x klik</li>
-                </ul>
+              <div className="w-[266px] flex flex-col justify-between">
+                <div>
+                  <h3 className="text-[20px] font-Open_Sans font-bold">
+                    Web Trader
+                  </h3>
+                  <ul className="list-disc font-Open_Sans">
+                    <li>Tidak perlu tambahan software</li>
+                    <li>Eksekusi Cepat</li>
+                    <li>Order dalam 1x klik</li>
+                  </ul>
+                </div>
 
-                <Link href="/realAkun">
+                <Link href="/real-akun">
                   <button className="max-md:mt-5 md:mt-[40px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] w-max max-sm:w-full">
                     <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
                       lebih lanjut
@@ -233,16 +235,21 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="w-[266px]">
-                <h3 className="text-[20px] font-Open_Sans font-bold">
-                  Trade on Mobile & PC
-                </h3>
-                <ul className="list-disc ">
-                  <li>Lebih dari 50 Indikator Teknikal yang sudah terinstal</li>
-                  <li>Lebih dari 20 Alat Analisa Chart</li>
-                  <li>3 Tipe Chart & 9 Timeframe</li>
-                </ul>
-                <Link href="/realAkun">
+              <div className="w-[266px] flex flex-col justify-between">
+                <div>
+                  <h3 className="text-[20px] font-Open_Sans font-bold">
+                    Trade on Mobile & PC
+                  </h3>
+                  <ul className="list-disc font-Open_Sans">
+                    <li>
+                      Lebih dari 50 Indikator Teknikal yang sudah terinstal
+                    </li>
+                    <li>Lebih dari 20 Alat Analisa Chart</li>
+                    <li>3 Tipe Chart & 9 Timeframe</li>
+                  </ul>
+                </div>
+
+                <Link href="/real-akun">
                   <button className="max-sm:mt-5 md:mt-[20px] py-[18px] px-[40px] rounded-xl bg-[#3a336f] max-sm:w-full">
                     <p className=" text-[#f1c50e] font-Open_Sans text-[12px] uppercase font-bold">
                       lebih lanjut
@@ -300,8 +307,7 @@ export default function Home() {
                 <h4 className="text-[30px] font-Montserrat uppercase tracking-wide font-medium text-white max-sm:text-center">
                   TRADING
                 </h4>
-                <div className="">
-                  {/* <Image src={tesBG} alt="" className="" /> */}
+                <div className="mt-[40px] flex justify-center">
                   <svg
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 512 512"
@@ -434,49 +440,55 @@ export default function Home() {
               Berbagai produk trading yang perlu anda ketahui.
             </p>
             <div className="flex flex-wrap justify-center gap-6 mt-12">
-              <div className="drop-shadow-2xl">
-                <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
-                <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
-                  <h2 className="text-[36px] font-Montserrat text-black font-bold">
-                    Forex
-                  </h2>
-                  <h3 className="uppercase text-[16px] font-Open_Sans mt-[16px] tracking-wider font-semibold">
-                    Mata Uang asing
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[16px] text-slate-600 text-center">
-                    EURUSD, GBPUSD, NZDUSD, AUDUSD, USDJPY, USDCHF, USDCAD dan
-                    beberapa mata uang lainnya.
-                  </p>
+              <Link href={"/produk-trading"}>
+                <div className="drop-shadow-2xl">
+                  <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
+                  <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
+                    <h2 className="text-[36px] font-Montserrat text-black font-bold">
+                      Forex
+                    </h2>
+                    <h3 className="uppercase text-[16px] font-Open_Sans mt-[16px] tracking-wider font-semibold">
+                      Mata Uang asing
+                    </h3>
+                    <p className="text-[16px] font-Open_Sans mt-[16px] text-slate-600 text-center">
+                      EURUSD, GBPUSD, NZDUSD, AUDUSD, USDJPY, USDCHF, USDCAD dan
+                      beberapa mata uang lainnya.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="drop-shadow-2xl">
-                <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
-                <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
-                  <h2 className="text-[36px] font-Montserrat text-black font-bold">
-                    Index
-                  </h2>
-                  <h3 className="uppercase text-[16px] font-Open_Sans mt-[16px] tracking-wider font-semibold">
-                    GABUNGAN SAHAM
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[16px] text-slate-600 text-center">
-                    Nasdaq100, SP500, Dowjones dan Index Asia.
-                  </p>
+              </Link>
+              <Link href={"/produk-trading"}>
+                <div className="drop-shadow-2xl">
+                  <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
+                  <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
+                    <h2 className="text-[36px] font-Montserrat text-black font-bold">
+                      Index
+                    </h2>
+                    <h3 className="uppercase text-[16px] font-Open_Sans mt-[16px] tracking-wider font-semibold">
+                      GABUNGAN SAHAM
+                    </h3>
+                    <p className="text-[16px] font-Open_Sans mt-[16px] text-slate-600 text-center">
+                      Nasdaq100, SP500, Dowjones dan Index Asia.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="drop-shadow-2xl">
-                <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
-                <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
-                  <h2 className="text-[36px] font-Montserrat text-black font-bold">
-                    Komoditi
-                  </h2>
-                  <h3 className="uppercase text-[16px] font-Open_Sans mt-[16px] tracking-wider font-semibold">
-                    HASIL ALAM
-                  </h3>
-                  <p className="text-[16px] font-Open_Sans mt-[16px] text-slate-600 text-center">
-                    XAUUSD, XAGUSD, OIL
-                  </p>
+              </Link>
+              <Link href={"/produk-trading"}>
+                <div className="drop-shadow-2xl">
+                  <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
+                  <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
+                    <h2 className="text-[36px] font-Montserrat text-black font-bold">
+                      Komoditi
+                    </h2>
+                    <h3 className="uppercase text-[16px] font-Open_Sans mt-[16px] tracking-wider font-semibold">
+                      HASIL ALAM
+                    </h3>
+                    <p className="text-[16px] font-Open_Sans mt-[16px] text-slate-600 text-center">
+                      XAUUSD, XAGUSD, OIL
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -497,9 +509,9 @@ export default function Home() {
               <p className="md:text-[24px] max-md:text-[16px] font-Open_Sans mt-[20px]">
                 Hasilkan uang dengan klik melalui HP anda.
               </p>
-              <Link href="/realAkun">
+              <Link href="/real-akun">
                 <button className="uppercase text-[#3a336f] bg-[#f1c50e] mt-[20px] text-[12px] py-[15px] px-[41px] w-[172px] h-[50px] font-bold rounded-xl">
-                  Learn More
+                  Lebih Lanjut
                 </button>
               </Link>
             </div>

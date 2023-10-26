@@ -83,14 +83,14 @@ const CustomNavbar = () => {
                       aria-labelledby="dropdownLargeButton"
                     >
                       <li>
-                        <Link href={"/"}>
+                        <Link href={"/mulai-trading"}>
                           <button className=" px-4 py-2 hover:bg-gray-100 hover:text-[#f1c50e] w-full items-start flex">
                             Mulai Trading
                           </button>
                         </Link>
                       </li>
                       <li>
-                        <Link href={"/"}>
+                        <Link href={"/produk-trading"}>
                           <button className=" px-4 py-2 hover:bg-gray-100 hover:text-[#f1c50e] w-full items-start flex">
                             Produk Trading
                           </button>
@@ -274,7 +274,7 @@ const CustomNavbar = () => {
                     </ul>
                   </div>
                 </li>
-                
+
                 <li className="group">
                   <Link href={"/"}>
                     <button
@@ -283,7 +283,6 @@ const CustomNavbar = () => {
                       className="flex items-center justify-between w-full py-2 pl-3 pr-4 group-hover:scale-125 duration-300 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#f1c50e] md:p-0 md:w-auto "
                     >
                       VCareer
-                      
                     </button>
                   </Link>
                 </li>
