@@ -251,7 +251,7 @@ const CustomNavbar = () => {
                       aria-labelledby="dropdownLargeButton"
                     >
                       <li>
-                        <Link href={"/"}>
+                        <Link href={"/profil-vplus"}>
                           <button className=" px-4 py-2 hover:bg-gray-100 hover:text-[#f1c50e] w-full items-start flex">
                             Profil Vplus
                           </button>

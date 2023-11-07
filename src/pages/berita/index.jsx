@@ -5,6 +5,7 @@ import SkeletonBerita from "@/components/skeletonBerita";
 import moment from "moment/moment";
 import Link from "next/link";
 import Head from "next/head";
+import { SingleTicker, Ticker } from "react-ts-tradingview-widgets";
 
 const BeritaPage = () => {
   const [berita, setBerita] = useState([]);
@@ -68,6 +69,9 @@ const BeritaPage = () => {
 
   return (
     <>
+    <Head>
+      <title>Berita</title>
+    </Head>
       <div className="flex justify-center">
         <div className="w-[620px] flex flex-col items-center h-screen border-r border-l border-slate-200">
           <div className="flex w-full px-[20px] border-b items-center py-4">
@@ -77,6 +81,7 @@ const BeritaPage = () => {
           {berita.length > 0 ? showBeritas() : showSkeleton()}
         </div>
       </div>
+          <Ticker colorTheme="light" ></Ticker>
     </>
   );
 };

@@ -20,6 +20,7 @@ module.exports = {
     fontFamily: {
       Montserrat: ["Montserrat", "sans-serif"],
       Open_Sans: ["Open Sans", "sans-serif"],
+      Antonio: ["Antonio", "sans-serif"],
     },
   },
   plugins: [require("flowbite/plugin")],

@@ -8,6 +8,7 @@ import {
   VplusProductsEnergy,
 } from "@/utils/listsGroup";
 import CustomFooter from "@/components/customFooter";
+import Head from "next/head";
 
 const ProdukTradingPage = () => {
   const [toggle, setToggle] = useState(1);
@@ -17,6 +18,9 @@ const ProdukTradingPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Produk Trading</title>
+      </Head>
       <section className="relative h-[300px]">
         <Image
           src={bgTradingdiVplus}

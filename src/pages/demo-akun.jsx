@@ -19,14 +19,6 @@ const DemoAkunPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const config = {
-      //   headers: { "content-type": "multipart/form-data" },
-      // };
-      // const formData = new FormData();
-      // formData.append("nama", formDatas.nama);
-      // formData.append("telp", formDatas.telp);
-      // formData.append("email", formDatas.email);
-
       const response = await postDemoAkun(formDatas);
       if (response.status === 201) {
         toast({
@@ -154,19 +146,6 @@ const DemoAkunPage = () => {
                     />
                   </div>
                 </div>
-
-                {/* <div className="flex items-center gap-2">
-                  <Checkbox id="agree" />
-                  <Label className="flex" htmlFor="agree">
-                    <p>I agree with the</p>
-                    <LinkComponent
-                      className="text-cyan-600 hover:underline dark:text-cyan-500"
-                      href="/forms"
-                    >
-                      <p>terms and conditions</p>
-                    </LinkComponent>
-                  </Label>
-                </div> */}
 
                 <button
                   type="submit"

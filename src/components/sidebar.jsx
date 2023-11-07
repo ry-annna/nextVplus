@@ -13,8 +13,8 @@ export default function MultiLevelDropdown() {
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Collapse label="Trading" icon={FaRegChartBar}>
-            <Sidebar.Item href="#">Mulai Trading</Sidebar.Item>
-            <Sidebar.Item href="#">Produk Trading</Sidebar.Item>
+            <Sidebar.Item href="/mulai-trading">Mulai Trading</Sidebar.Item>
+            <Sidebar.Item href="/produk-trading">Produk Trading</Sidebar.Item>
             <Sidebar.Item href="#">Platform Trading</Sidebar.Item>
           </Sidebar.Collapse>
           <Sidebar.Collapse label="Market" icon={IoNewspaperOutline}>
@@ -28,7 +28,7 @@ export default function MultiLevelDropdown() {
             <Sidebar.Item href="#">Webinar Vplus</Sidebar.Item>
           </Sidebar.Collapse>
           <Sidebar.Collapse label="Company" icon={MdOutlineMapsHomeWork}>
-            <Sidebar.Item href="#">Profil Vplus</Sidebar.Item>
+            <Sidebar.Item href="/profil-vplus">Profil Vplus</Sidebar.Item>
             <Sidebar.Item href="#">Kontak Vplus</Sidebar.Item>
             <Sidebar.Item href="#">Tanya Jawab Vplus</Sidebar.Item>
           </Sidebar.Collapse>

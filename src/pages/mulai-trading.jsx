@@ -9,10 +9,14 @@ import logofavicon from "../assets/images/favicon.png";
 import logo182864346f230bf from "../assets/images/1828643-46f230bf.png";
 import AlurRegis from "@/components/alurRegis";
 import CustomFooter from "@/components/customFooter";
+import Head from "next/head";
 
 const MulaiTradingPage = () => {
   return (
     <>
+      <Head>
+        <title>Mulai Trading</title>
+      </Head>
       <section className="relative h-[300px]">
         <Image
           src={bgTradingdiVplus}
