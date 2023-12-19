@@ -15,12 +15,16 @@ export default function MultiLevelDropdown() {
           <Sidebar.Collapse label="Trading" icon={FaRegChartBar}>
             <Sidebar.Item href="/mulai-trading">Mulai Trading</Sidebar.Item>
             <Sidebar.Item href="/produk-trading">Produk Trading</Sidebar.Item>
-            <Sidebar.Item href="#">Platform Trading</Sidebar.Item>
+            <Sidebar.Item href="/platform-trading">
+              Platform Trading
+            </Sidebar.Item>
           </Sidebar.Collapse>
           <Sidebar.Collapse label="Market" icon={IoNewspaperOutline}>
             <Sidebar.Item href="/berita">Berita</Sidebar.Item>
             <Sidebar.Item href="#">Analisa</Sidebar.Item>
-            <Sidebar.Item href="#">Kalender Ekonomi</Sidebar.Item>
+            <Sidebar.Item href="/kalender-ekonomi">
+              Kalender Ekonomi
+            </Sidebar.Item>
           </Sidebar.Collapse>
           <Sidebar.Collapse label="Edukasi" icon={PiLightbulbBold}>
             <Sidebar.Item href="#">Pemula</Sidebar.Item>
@@ -32,7 +36,7 @@ export default function MultiLevelDropdown() {
             <Sidebar.Item href="#">Kontak Vplus</Sidebar.Item>
             <Sidebar.Item href="#">Tanya Jawab Vplus</Sidebar.Item>
           </Sidebar.Collapse>
-          <Sidebar.Item href="#">
+          <Sidebar.Item href="/karir">
             <p>VCareer</p>
           </Sidebar.Item>
         </Sidebar.ItemGroup>

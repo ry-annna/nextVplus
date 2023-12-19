@@ -77,7 +77,7 @@ const MulaiTradingPage = () => {
             </Link>
           </div>
           <div className="w-[570px] h-[385px] p-[30px] flex flex-col justify-center">
-            <div className="bg-[#3a336f] h-[300px] w-full rounded-xl flex flex-col p-[30px]">
+            <div className="bg-gradient-to-br from-[#3a336f] to-purple-500 h-[300px] w-full rounded-xl flex flex-col p-[30px]">
               <div className="flex flex-row items-center gap-2">
                 <Image src={logofavicon} className="w-[36px] h-[36px]" alt="" />
                 <p className="text-[30px] font-Open_Sans text-white font-bold">

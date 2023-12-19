@@ -97,7 +97,7 @@ const CustomNavbar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href={"/"}>
+                        <Link href={"/platform-trading"}>
                           <button className=" px-4 py-2 hover:bg-gray-100 hover:text-[#f1c50e] w-full items-start flex">
                             Platform Trading
                           </button>
@@ -146,14 +146,14 @@ const CustomNavbar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href={"/analisa"}>
+                        <Link href={"/"}>
                           <button className=" px-4 py-2 hover:bg-gray-100 hover:text-[#f1c50e] w-full items-start flex">
                             Analisa
                           </button>
                         </Link>
                       </li>
                       <li>
-                        <Link href={"/"}>
+                        <Link href={"/kalender-ekonomi"}>
                           <button className=" px-4 py-2 hover:bg-gray-100 hover:text-[#f1c50e] w-full items-start flex">
                             Kalender Ekonomi
                           </button>
@@ -276,7 +276,7 @@ const CustomNavbar = () => {
                 </li>
 
                 <li className="group">
-                  <Link href={"/"}>
+                  <Link href={"/karir"}>
                     <button
                       id="dropdownNavbarLink"
                       data-dropdown-toggle="dropdownNavbar"

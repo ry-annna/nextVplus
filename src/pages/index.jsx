@@ -441,7 +441,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 mt-12">
               <Link href={"/produk-trading"}>
-                <div className="drop-shadow-2xl">
+                <div className="duration-300 drop-shadow-2xl hover:scale-110">
                   <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
                   <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
                     <h2 className="text-[36px] font-Montserrat text-black font-bold">
@@ -458,7 +458,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link href={"/produk-trading"}>
-                <div className="drop-shadow-2xl">
+                <div className="duration-300 drop-shadow-2xl hover:scale-110">
                   <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
                   <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
                     <h2 className="text-[36px] font-Montserrat text-black font-bold">
@@ -474,7 +474,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link href={"/produk-trading"}>
-                <div className="drop-shadow-2xl">
+                <div className="duration-300 drop-shadow-2xl hover:scale-110">
                   <div className="w-[261px] bg-[#f1c50e] h-[20px]"></div>
                   <div className="flex flex-col items-center bg-white rounded-b-3xl h-[351px] w-[261px] py-[30px] px-[20px]">
                     <h2 className="text-[36px] font-Montserrat text-black font-bold">
@@ -632,7 +632,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px] hover:scale-110 duration-300">
                     <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
                     <div className="relative top-0 z-20 flex flex-col items-center ">
                       <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
@@ -658,7 +658,7 @@ export default function Home() {
                   href="https://api.whatsapp.com/send?phone=6281211001797"
                   target="_blank"
                 >
-                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px] hover:scale-110 duration-300">
                     <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
                     <div className="relative top-0 z-20 flex flex-col items-center ">
                       <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
@@ -686,7 +686,7 @@ export default function Home() {
                   </div>
                 </Link>
                 <Link href="mailto:digital@vplus.id" target="_blank">
-                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px]">
+                  <div className="w-[230px] h-[390px] relative flex justify-center p-[15px] hover:scale-110 duration-300">
                     <div className="bg-white absolute z-10 bottom-0 h-[300px] w-full rounded-2xl drop-shadow-2xl flex items-center flex-col" />
                     <div className="relative top-0 z-20 flex flex-col items-center ">
                       <div className="bg-[#f1c50e] w-[150px] h-[150px] rounded-full flex items-center justify-center">
@@ -737,18 +737,20 @@ export default function Home() {
                         href="https://www.instagram.com/vplus.id/"
                         target="_blank"
                       >
-                        <div className="flex items-center gap-3 w-max">
+                        <div className="flex items-center gap-3 duration-300 w-max hover:scale-125">
                           <SiInstagram className="w-[30px] h-[30px] text-[#f1c50e]" />
-                          <p className="font-semibold text-white">vplus.id</p>
+                          <p className="font-semibold text-white underline">
+                            vplus.id
+                          </p>
                         </div>
                       </Link>
                       <Link
                         href="https://youtube.com/@vplusplatinum8549?si=ciqJ4-095OTlTGOP"
                         target="_blank"
                       >
-                        <div className="flex items-center gap-3 w-max">
+                        <div className="flex items-center gap-3 duration-300 w-max hover:scale-125">
                           <SiYoutube className="w-[30px] h-[30px] text-[#f1c50e]" />
-                          <p className="font-semibold text-white">
+                          <p className="font-semibold text-white underline">
                             VPlus Platinum 8
                           </p>
                         </div>
@@ -760,9 +762,9 @@ export default function Home() {
                         href="https://www.linkedin.com/company/vplus-platinum-8-indonesia/"
                         target="_blank"
                       >
-                        <div className="flex items-center gap-3 w-max">
+                        <div className="flex items-center gap-3 duration-300 w-max hover:scale-125">
                           <SiLinkedin className="w-[30px] h-[30px] text-[#f1c50e]" />
-                          <p className="font-semibold text-white">
+                          <p className="font-semibold text-white underline">
                             VPlus Platinum 8 Indonesia
                           </p>
                         </div>
@@ -771,9 +773,11 @@ export default function Home() {
                         href="https://www.tiktok.com/@vplus.id"
                         target="_blank"
                       >
-                        <div className="flex items-center gap-3 w-max">
+                        <div className="flex items-center gap-3 duration-300 w-max hover:scale-125">
                           <SiTiktok className="w-[30px] h-[30px] text-[#f1c50e]" />
-                          <p className="font-semibold text-white">vplus.id</p>
+                          <p className="font-semibold text-white underline">
+                            vplus.id
+                          </p>
                         </div>
                       </Link>
                     </div>
